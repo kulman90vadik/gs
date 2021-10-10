@@ -1,41 +1,65 @@
 @font-face {
-    font-family: 'SourceSansPro';
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src:    url('../fonts/SFProText-Light.woff2') format('woff2'),
+            url('../fonts/SFProText-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SFProText';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src:    url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
-            url('../fonts/SourceSansPro-Regular.woff') format('woff');
+    src:    url('../fonts/SFProText-Regular.woff2') format('woff2'),
+            url('../fonts/SFProText-Regular.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src:    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-            url('../fonts/Montserrat-Regular.woff') format('woff');
-}
-@font-face {
-    font-family: 'Montserrat';
+    font-family: 'SFProText';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src:    url('../fonts/Montserrat-Medium.woff2') format('woff2'),
-            url('../fonts/Montserrat-Medium.woff') format('woff');
+    src:    url('../fonts/SFProText-Medium.woff2') format('woff2'),
+            url('../fonts/SFProText-Medium.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'Montserrat';
+    font-family: 'SFProText';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src:    url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
-            url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    src:    url('../fonts/SFProText-Semibold.woff2') format('woff2'),
+            url('../fonts/SFProText-Semibold.woff') format('woff');
 }
+
+
 @font-face {
-    font-family: 'Montserrat';
+    font-family: 'SFProDisplay';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-display: swap;
-    src:    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
-            url('../fonts/Montserrat-Bold.woff') format('woff');
+    src:    url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+            url('../fonts/SFProDisplay-Regular.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'SFProDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src:    url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
+            url('../fonts/SFProDisplay-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SFProDisplay';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:    url('../fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+            url('../fonts/SFProDisplay-Semibold.woff') format('woff');
+}
+
 

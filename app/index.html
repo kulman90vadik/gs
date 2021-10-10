@@ -4,763 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floristman</title>
+    <title>Магазин замков</title>
     <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <nav class="menu">
-                <ul class="menu__list">
-                    <li class="menu__item">
-                        <div class="menu__head">
-                            Цветы
-                            <div class="menu__plus" aria-label="Выподающий список"></div>
-                        </div>
-                        <ul class="menu__holder">
-                            <li class="menu__items">
-                                <a class="menu__link" href="catalog.html">Ромашки для Наташки</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="catalog.html">Ромашки для Наташки</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="catalog.html">Ромашки для Наташки</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="catalog.html">Ромашки для Наташки</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item">
-                        <div class="menu__head">
-                            Сладости
-                            <div class="menu__plus" aria-label="Выподающий список"></div>
-                        </div>
-                        <ul class="menu__holder">
-                            <li class="menu__items">
-                                <a class="menu__link" href="#">Шоколадные буквы</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="#">Рафаэлло</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="#">Торт Рафаэлло</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="#">NUTELLA</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="#">Конфеты MERCI</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__head" href="#">Воздушные шарики</a>
-                    </li>    
-                    <li class="menu__item">
-                        <a class="menu__head" href="#">Подарки</a>
-                    </li>    
-                    <li class="menu__item">
-                        <a class="menu__head" href="#">Услуги</a>
-                    </li>    
-                    <li class="menu__item">
-                        <a class="menu__head" href="#">Аксессуары</a>
-                    </li>    
-                    <li class="menu__item">
-                        <div class="menu__head">
-                            Фруктовые корзины
-                            <div class="menu__plus" aria-label="Выподающий список"></div>
-                        </div>
-                        <ul class="menu__holder">
-                            <li class="menu__items">
-                                <a class="menu__link" href="catalog.html">Ромашки для Наташки</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="catalog.html">Ромашки для Наташки</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="catalog.html">Ромашки для Наташки</a>
-                            </li>
-                            <li class="menu__items">
-                                <a class="menu__link" href="catalog.html">Ромашки для Наташки</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <button class="header__btn" type="button" aria-label="Выезжающее меню сайта">
-                <span class="header__btn-item"></span>
-                <span class="header__btn-item"></span>
-                <span class="header__btn-item"></span>
-            </button>
-            <a class="logo" href="index.html">
-                <img class="logo__images" src="./images/logo.png" alt="Логотип">
-            </a>
-            <ul class="header__list">
-                <li class="header__item">
-                    <a class="header__link" href="#">
-                        <svg class="header__icon header__search" aria-label="Поиск информации по сайту">
-                            <use xlink:href="images/sprite.svg#search"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="header__item">
-                    <a class="header__link header__link-corb" href="basket.html">
-                        <svg class="header__icon header__corb" aria-label="Переход в корзину с товарами">
-                            <use xlink:href="images/sprite.svg#corb"></use>
-                        </svg>
-                        <span class="header__number">0</span>
-                    </a>
-                </li>
-                <li class="header__item">
-                    <a class="header__link" href="identity.html">
-                        <svg class="header__icon header__user" aria-label="Личный кабинет">
-                            <use xlink:href="images/sprite.svg#user"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="header__item">
-                    <a class="header__link" href="registration.html">
-                        <svg class="header__icon header__login" aria-label="Регистрация">
-                            <use xlink:href="images/sprite.svg#login"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top-inner">
+                <p class="header__text">
+                    Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09
+                </p>
+                <a class="header__link" href="#">Обратный звонок</a>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="container">
+            <div class="header__bottom-inner">
+                <a class="logo" href="#">
+                    <img class="logo__images" src="images/logo.svg" alt="Логотип">
+                </a>
+        
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Главная</a>
+                        </li>
+        
+                        <li class="menu__item menu__item--catalog">
+                            <a class="menu__link" href="#">
+                                <div class="menu__head">
+                                    Каталог
+                                    <svg class="menu__icon" aria-label="Выподащий список">
+                                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </div>
+                            </a>    
+                            <div class="menu__holder">
+                                <ul class="menu__dropdown">
+                                    <li class="menu__dropdown-item">
+                                        <a class="menu__dropdown-link" data="images/doorlock-1.jpg" href="#">
+                                            Накладные электронные замки
+                                        </a>
+                                    </li>
+                                    <li class="menu__dropdown-item">
+                                        <a class="menu__dropdown-link" data="images/doorlock-2.jpg" href="#">
+                                            Врезные электронные замки
+                                        </a>
+                                    </li>
+                                    <li class="menu__dropdown-item">
+                                        <a class="menu__dropdown-link" data="images/doorlock-3.jpg" href="#">
+                                            Замки для квартиры
+                                        </a>
+                                    </li>
+                                    <li class="menu__dropdown-item">
+                                        <a class="menu__dropdown-link" data="images/doorlock-4.jpg" href="#">
+                                            Замки для дома
+                                        </a>
+                                    </li>
+                                    <li class="menu__dropdown-item">
+                                        <a class="menu__dropdown-link" data="images/doorlock-5.jpg" href="#">
+                                            Замки для отелей
+                                        </a>
+                                    </li>
+                                    <li class="menu__dropdown-item">
+                                        <a class="menu__dropdown-link" data="images/doorlock-6.jpg" href="#">
+                                            Замки для офиса
+                                        </a>
+                                    </li>
+                                    <li class="menu__dropdown-item">
+                                        <a class="menu__dropdown-link" data="images/doorlock-7.jpg" href="#">
+                                            Замки для шкафчиков
+                                        </a>
+                                    </li>
+                                    <li class="menu__dropdown-item">
+                                        <a class="menu__dropdown-link" data="images/doorlock-8.jpg" href="#">
+                                            Замки для раздевалок
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="menu__images">
+                                    <img class="menu__photo" src="images/doorlock-1.jpg" alt="Замок">
+                                </div>
+                            </div>
+                        </li>
+        
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Оптовая продажа</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+        
+                <a class="header__tel" href="tel:+79665588499">
+                    <svg class="header__tel-icon" aria-label="Номер телефона для связи">
+                        <use xlink:href="images/sprite.svg#tel"></use>
+                    </svg>
+                    <p class="header__tel-text">+7 (966) 55 88 499</p>
+                </a>
+                <a class="header__heart" href="#">
+                    <svg class="header__icon header__heart-icon" aria-label="Просмотр понравившихся товаров">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                </a>
+                <a class="header__corb" href="#">
+                    <svg class="header__icon header__corb-icon" aria-label="Просмотр товаров в корзине">
+                        <use xlink:href="images/sprite.svg#corb"></use>
+                    </svg>
+                </a>    
+
+            </div>
         </div>
     </div>
 </header>
-    <section class="home" style="background-image: url('images/home-bg.jpg');">
-    <div class="container">
-        <div class="home__inner">
-            <span class="home__subtitle wow animate__backInLeft" data-wow-duration="2s" data-wow-delay="1s">Подарите ощущение праздника</span>
-            <h1 class="home__title wow animate__backInLeft" data-wow-duration="2s" data-wow-delay="1.5s">Собираем букеты, созданные для Вас</h1>
-            <a class="link home__link wow animate__backInLeft" href="catalog.html" data-wow-duration="2s" data-wow-delay="2s">Выбрать букет</a>
-        </div>
-    </div>
-</section>
+
+
     <main class="main">
-        <section class="discount">
-    <div class="container">
-        <h2 class="discount__title title wow animate__backInLeft" data-wow-offset="10" data-wow-duration="1.5s">Скидки</h2>
-        <ul class="discount__list">
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="discount__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="../catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-        </ul>
-    </div>
-</section>
-        <section class="about">
-    <div class="container">
-        <h2 class="about__title title wow animate__backInLeft" data-wow-offset="10" data-wow-duration="1.5s">Почему именно мы?</h2>
-        <ul class="about__list">
-            <li class="about__item">
-                <div class="about__text about__text--composition-1">
-                    <p>
-                        Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант. Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант
-                    </p>
-                </div>
-                <div class="about__images about__images--composition-1" aria-label="Декоративная картинка" style="background-image: url(images/about-img-1.jpg);"></div>
-            </li>
-            <li class="about__item">
-                <div class="about__text about__text--composition-2">
-                    <p>
-                        Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант
-                    </p>
-                </div>
-                <div class="about__images about__images--composition-2" aria-label="Декоративная картинка" style="background-image: url(images/about-img-2.jpg);"></div>
-            </li>
-            <li class="about__item">
-                <div class="about__text about__text--composition-3">
-                    <p>
-                        Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант
-                    </p>
-                </div>
-                <div class="about__images about__images--composition-3" aria-label="Декоративная картинка" style="background-image: url(images/about-img-3.jpg);"></div>
-            </li>
-        </ul>
-    </div>
-</section>
-        <section class="gallery">
-    <div class="container">
-        <h2 class="gallery__title title wow animate__backInLeft" data-wow-offset="10" data-wow-duration="1.5s">Каталог</h2>
         
-        <div class="gallery__inner">
-            <div class="gallery__column">
-                <div class="gallery__item">
-                    <article class="gallery-card">
-                        <a class="gallery-card__link" href="#">
-                            <img class="gallery-card__images" src="images/gallery-card-1.jpg" alt="Букет роз">
-                            <div class="gallery-card__name">
-                                <p class="gallery-card__text">Для кого</p>
-                                <div class="gallery-card__top" aria-label="Декоративные картинки"></div>
-                                <div class="gallery-card__bottom" aria-label="Декоративные картинки"></div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-                <div class="gallery__item">
-                    <article class="gallery-card">
-                        <a class="gallery-card__link" href="#">
-                            <img class="gallery-card__images" src="images/gallery-card-3.jpg" alt="Букет роз">
-                            <div class="gallery-card__name">
-                                <p class="gallery-card__text">Праздничная коллекция</p>
-                                <div class="gallery-card__top" aria-label="Декоративные картинки"></div>
-                                <div class="gallery-card__bottom" aria-label="Декоративные картинки"></div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-            </div>
-            <div class="gallery__column gallery__column--lang">
-                <div class="gallery__item gallery__item--lang">
-                    <article class="gallery-card">
-                        <a class="gallery-card__link" href="#">
-                            <img class="gallery-card__images" src="images/gallery-card-2.jpg" alt="Букет роз">
-                            <div class="gallery-card__name gallery-card__name--right">
-                                <p class="gallery-card__text">Подарки</p>   
-                                <div class="gallery-card__top" aria-label="Декоративные картинки"></div>
-                                <div class="gallery-card__bottom" aria-label="Декоративные картинки"></div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-                <div class="gallery__item gallery__item--lang gallery__item--high">
-                    <article class="gallery-card">
-                        <a class="gallery-card__link" href="#">
-                            <img class="gallery-card__images" src="images/gallery-card-4.jpg" alt="Букет роз">
-                            <div class="gallery-card__name gallery-card__name--right">
-                                <p class="gallery-card__text">Букеты</p>   
-                                <div class="gallery-card__top" aria-label="Декоративные картинки"></div>
-                                <div class="gallery-card__bottom" aria-label="Декоративные картинки"></div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-                <div class="gallery__item gallery__item--lang">
-                    <article class="gallery-card">
-                        <a class="gallery-card__link" href="#">
-                            <img class="gallery-card__images" src="images/gallery-card-6.jpg" alt="Букет роз">
-                            <div class="gallery-card__name gallery-card__name--right">
-                                <p class="gallery-card__text">Розы</p>   
-                                <div class="gallery-card__top" aria-label="Декоративные картинки"></div>
-                                <div class="gallery-card__bottom" aria-label="Декоративные картинки"></div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-            </div>
-            <div class="gallery__column">
-                <div class="gallery__item">
-                    <article class="gallery-card">
-                        <a class="gallery-card__link" href="#">
-                            <img class="gallery-card__images" src="images/gallery-card-5.jpg" alt="Сладости">
-                            <div class="gallery-card__name">
-                                <p class="gallery-card__text">Сладости</p>
-                                <div class="gallery-card__top" aria-label="Декоративные картинки"></div>
-                                <div class="gallery-card__bottom" aria-label="Декоративные картинки"></div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-                <div class="gallery__item">
-                    <article class="gallery-card">
-                        <a class="gallery-card__link" href="#">
-                            <img class="gallery-card__images" src="images/gallery-card-7.jpg" alt="Комнатные растения">
-                            <div class="gallery-card__name">
-                                <p class="gallery-card__text">Комнатные растения</p>
-                                <div class="gallery-card__top" aria-label="Декоративные картинки"></div>
-                                <div class="gallery-card__bottom" aria-label="Декоративные картинки"></div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <section class="choice">
-    <div class="container">
-        <h2 class="choice__title title wow animate__backInLeft" data-wow-offset="10" data-wow-duration="1.5s">Для кого</h2>
-        <ul class="choice__list">
-            <li class="choice__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="choice__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="choice__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="choice__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="choice__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="choice__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="choice__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-            <li class="choice__item">
-                <article class="discount-card">
-                    <div class="discount-card__photo">
-                        <img class="discount-card__images" src="images/discount-card.png" alt="Букет ромашек">
-                        <div class="discount-card__sale discount-card__sale--hit">Хит продаж</div>
-                        <div class="discount-card__sale discount-card__sale--novelty">Новинка</div>
-                        <div class="discount-card__sale discount-card__sale--top">Букет дня</div>
-                        <div class="discount-card__sale discount-card__sale--bottom">Скидка 50%</div>
-                    </div>
-                    <div class="discount-card__name">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__name discount-card__name--last">№225 “Ромашки для Наташки”</div>
-                    <div class="discount-card__inner">
-                        <div class="discount-card__price">
-                            <span class="discount-card__underline">5 400 грн</span>
-                            <span class="discount-card__cost">3 700 грн</span>
-                        </div>
-                        <a class="discount-card__link link" href="catalog-card.html">Заказать</a>
-                    </div>
-                </article>
-            </li>
-        </ul>
-        <a class="choice__link" href="catalog.html">Перейти к каталогу</a>
-    </div>
-</section>
-        <section class="delivery" style="background-image: url(../images/delivery-bg.jpg);">
-    <div class="container">
-        <h2 class="delivery__title title wow animate__backInLeft" data-wow-offset="10" data-wow-duration="1.5s">Доставка</h2>
-        <div class="delivery__text">
-            <p>
-                Возьмём на себя все заботы по созданию, оформлению и доставке корпоративных букетов в обычные и праздничные дни за разумные деньги
-            </p>
-        </div>
-    </div>
-</section>
-        <section class="my-bouquet">
-    <div class="container">
-        <h2 class="my-bouquet__title title wow animate__backInUp" data-wow-offset="10" data-wow-duration="1.5s">Предложи свой букет</h2>
-        <div class="my-bouquet__inner">
-            <form class="form my-bouquet__form" action="#">
-                <label class="visually-hidden" for="name">Введите Ваше имя</label>
-                <input class="form__input" type="text" name="Имя" id="mame" placeholder="Имя">
-                <label class="visually-hidden" for="tel">Введите Ваш номер телефона</label>
-                <input class="form__input" type="tel" name="Телефон" id="tel" placeholder="Телефон">
-                <label class="visually-hidden" for="textarea">Напишите ваше пожелание</label>
-                <textarea class="form__input form__textarea" name="Текстовое сообщение" id="textarea" placeholder="Ваша идея"></textarea>
-                <button class="form__btn" type="submit">Отправить</button>
-            </form>
-            <div class="my-bouquet__bg" aria-label="картинка букета цветов" style="background-image: url(images/my-bouquet-bg.png);"></div>
-        </div>
-    </div>
-</section>
     </main>
-    <foooter class="footer">
-    <div class="container">
-        <h2 class="footer__title title wow animate__backInUp" data-wow-offset="10" data-wow-duration="1.5s">Контакты:</h2>
-        <ul class="footer__list">
-            <li class="footer__item">
-                <a class="footer__link footer__link--tel" href="tel:+749500000000">+749500000000</a>
-            </li>
-            <li class="footer__item">
-                <a class="footer__link footer__link--post" href="mailto:post@gmail.com">post@gmail.com</a>
-            </li>
-        </ul>
-        <ul class="social footer__social">
-            <li class="social__item">
-                <a class="social__link" href="#">
-                    <svg class="social__icon" aria-label="иконка viber">
-                        <use xlink:href="images/sprite.svg#viber"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="social__item">
-                <a class="social__link" href="#">
-                    <svg class="social__icon" aria-label="иконка facebook">
-                        <use xlink:href="images/sprite.svg#facebook"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="social__item">
-                <a class="social__link" href="#">
-                    <svg class="social__icon" aria-label="иконка whatsapp">
-                        <use xlink:href="images/sprite.svg#whatsapp"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="social__item">
-                <a class="social__link" href="#">
-                    <svg class="social__icon" aria-label="иконка instagram">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-        <p class="footer__text">&copy; 2021. Все права защищены</p>
-    </div>
-</foooter>
-
+    
     <script src="js/main.min.js"></script>
 </body>
 </html>
