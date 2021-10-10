@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floristman</title>
+    <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    @include('./components/header.html')
+    @include('./components/home.html')
+    <main class="main">
+        @include('./components/home/discount.html')
+        @include('./components/home/about.html')
+        @include('./components/home/gallery.html')
+        @include('./components/home/choice.html')
+        @include('./components/home/delivery.html')
+        @include('./components/home/my-bouquet.html')
+    </main>
+    @include('./components/footer.html')
+    <script src="js/main.min.js"></script>
+</body>
+</html>

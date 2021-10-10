@@ -1,0 +1,115 @@
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+body {
+    font-family: $Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    background-color: $bg-color;
+    color: $global;
+    display: flex;
+    flex-direction: column;
+    counter-reset: m-counter;
+    @include max($lg) {
+        line-height: 1.5;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.link {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    background-color: $link-bc;
+    border-radius: 37px;
+    padding: 22px 40px;
+    line-height: 1;
+    outline: transparent;
+    @include lineClamp;
+    -webkit-line-clamp: 1;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+        background-color: $global;
+    }
+    &:focus {
+        background-color: $link-bc;
+    }
+    &:active {
+        background-color: $pink;
+    }
+}
+
+.title {
+    font-size: 54px;
+    color: #272626;
+    font-weight: 700;
+    @include lineClamp;
+    -webkit-line-clamp: 1;
+    @include max($lg) {
+        font-size: 35px;
+    }
+    @include max($md) {
+        font-size: 30px;
+    }
+}
+
+
+.btn {
+    border: none;
+    cursor: pointer;
+    background-color: $link-bc;
+    border-radius: 21px;
+    padding: 9px 19px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    outline: transparent;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+        background-color: $global;
+    }
+    &:focus {
+        background-color: $link-bc;
+    }
+    &:active {
+        background-color: $pink;
+    }
+}
+
+.menu--active::-webkit-scrollbar {
+    width: 15px;
+}
+
+.menu--active::-webkit-scrollbar-track {
+    background-color: #32436E;
+}
+
+.menu--active::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #3A813F;
+    cursor: pointer;
+}
+
