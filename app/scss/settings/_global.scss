@@ -39,42 +39,57 @@ body {
     margin: 0 auto;
 }
 
-// .link {
-//     font-size: 24px;
-//     color: #fff;
-//     font-weight: 700;
-//     background-color: $link-bc;
-//     border-radius: 37px;
-//     padding: 22px 40px;
-//     line-height: 1;
-//     outline: transparent;
-//     @include lineClamp;
-//     -webkit-line-clamp: 1;
-//     transition: background-color 0.3s ease-in;
-//     &:hover {
-//         background-color: $global;
-//     }
-//     &:focus {
-//         background-color: $link-bc;
-//     }
-//     &:active {
-//         background-color: $pink;
-//     }
-// }
+.link {
+    font-family: $SFProDisplay;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    background-color: $main;
+    padding: 12px 37px;
+    line-height: 1;
+    outline: transparent;
+    @include lineClamp;
+    -webkit-line-clamp: 1;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    &:hover {
+        background-color: $light-blue;
+        color: $grey;
+    }
+    &:focus {
+        background-color: $grey;
+        color: $light-blue;
+    }
+    &:active {
+        background-color: transparent;
+        color: $main;
+    }
+}
 
-// .title {
-//     font-size: 54px;
-//     color: #272626;
-//     font-weight: 700;
-//     @include lineClamp;
-//     -webkit-line-clamp: 1;
-//     @include max($lg) {
-//         font-size: 35px;
-//     }
-//     @include max($md) {
-//         font-size: 30px;
-//     }
-// }
+.price {
+    display: flex;
+    line-height: 1;
+    &__actual {
+        font-weight: 600;
+        font-size: 24px;
+        margin-right: 12px;
+    }
+    &__old {
+        font-weight: 300;
+        font-size: 22px;
+        text-decoration-line: line-through;
+        color: #A4A4A4;
+    }
+}
+
+.title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.4;
+    @include lineClamp;
+    -webkit-line-clamp: 1;
+
+}
 
 
 // .btn {

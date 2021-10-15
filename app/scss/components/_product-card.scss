@@ -1,0 +1,99 @@
+.product-card {
+    max-width: 288px;
+    width: 100%;
+    position: relative;
+    display: block;
+    outline: transparent;
+    transition: transform 0.3s ease-in;
+    &__photo {
+        max-width: 288px;
+        width: 100%;
+        height: 320px;
+    }
+    &__images {
+        object-fit: cover;
+    }
+    &__info {
+        padding: 10px 12px;
+        box-shadow: inset 0 -1px 0 #EAEAEA, inset 1px 0 0 #EAEAEA, inset -1px 0 0 #EAEAEA;
+        transition: background-color 0.3s ease-in;
+    }
+    &__name {
+        font-size: 16px;
+        color: $grey;
+        display: block;
+        margin-bottom: 10px;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__hidden {
+        position: absolute;
+        top: 20px;
+        left: 12px;
+        right: 12px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7px;
+    }
+    &__stock {
+        color: $grey;
+        padding-left: 28px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto;
+        }
+    }
+    &__stock--check {
+        &::after {
+            background-image: url(../images/icons/check.svg);
+        }
+    }
+    &__stock--exit {
+        &::after {
+            background-image: url(../images/icons/exit.svg);
+        }
+    }
+    &__sale {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 12px;
+        padding: 8px 10px;
+        background-color: #fff;
+    }
+    &__present {
+        display: block;
+        font-size: 12px;
+        padding: 6px 8px 6px 30px;
+        position: relative;
+        background-color: #fff;
+        &::after {
+            position: absolute;
+            content: '';
+            left: 8px;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            transform: translateY(-50%);
+            background-image: url(../images/icons/gift.svg);
+        }
+    }
+    &:hover {
+        transform: translateY(-5px);
+    }
+    &:hover .product-card__info{
+        background-color: #d8d8d8;
+    }
+}

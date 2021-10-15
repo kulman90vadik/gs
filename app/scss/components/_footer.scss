@@ -1,0 +1,107 @@
+.footer {
+    padding-top: 55px;
+    background-color: #0D2436;
+    box-shadow: inset 0px 1px 0px #C4CDD5;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgba(#fff, 0.09);
+    }
+    &__holder {
+        max-width: 350px;
+        width: 100%;
+    }
+    &__logo {
+        display: block;
+        margin-bottom: 145px;
+        & .logo__images {
+            width: 105px;
+            height: 88px;
+        }
+    }
+    & .social {
+        display: flex;
+        align-items: center;
+        &__item {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+        &__link {
+            outline: transparent;
+            &:hover .social__icon{
+                fill: $main;
+            }
+            &:focus .social__icon{
+                fill: $rad;
+            }
+            &:active .social__icon{
+                fill: #ccc;
+            }
+        }
+        &__icon {
+            fill: #fff;
+            transition: fill 0.3s ease-in;
+            &--vk {
+                width: 26px;
+                height: 15px;
+            }
+            &--twitter {
+                width: 25px;
+                height: 20px;
+            }
+            &--facebook {
+                width: 13px;
+                height: 26px;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        width: 100%;
+    }
+    &__items {
+        max-width: 200px;
+        width: 100%;
+    }
+    &__subtitle {
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    &__link {
+        display: block;
+        font-weight: 300;
+        font-size: 16px;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+        &:hover {
+            color: $main;
+        }
+        &:focus {
+            color: $rad;
+        }
+        &:active {
+            color: #ccc;
+        }
+    }
+    &__phone,
+    &__email {
+        display: block;
+        font-weight: 300;
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    &__bottom {
+        padding: 24px 0;
+        text-align: center;
+        color: rgba(#fff, 0.6);
+        font-family: $SFProDisplay;
+    }
+}

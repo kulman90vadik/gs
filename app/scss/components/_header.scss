@@ -116,7 +116,6 @@
     }
 }
 
-
 .logo {
     outline: transparent;
     &__images {
@@ -124,9 +123,6 @@
         height: 42px;
     }
 }
-
-
-
 
 .menu {
     margin: 0 auto;
@@ -143,6 +139,9 @@
         position: relative;
         &:hover .menu__holder{
             transform: scale(1);
+        }
+        &:hover .menu__icon {
+            transform: rotate(180deg);
         }
     }
     &__link {
@@ -183,11 +182,12 @@
         fill: none;
         stroke: $black;
         margin-left: 10px;
-        transition: stroke 0.3s ease-in;
+        transition: stroke 0.3s ease-in, transform 0.3s ease-in;
     }
     &__holder {
         position: absolute;
         padding: 32px;
+        z-index: 100;
         left: 0;
         top: 30px;
         width: 730px;
@@ -201,12 +201,6 @@
         transform-origin: top left;
         transition: transform 0.5s ease-in-out;
     }
-
-
-
-
-
-
     &__dropdown {
         max-width: 345px;
         width: 100%;
@@ -244,7 +238,6 @@
         }
     }
     &__images {
-        // border: 1px solid #EAEAEA;
         background-color: #fafafa;
         max-width: 288px;
         width: 100%;
@@ -256,6 +249,3 @@
     }
 }
 
-
-
-    

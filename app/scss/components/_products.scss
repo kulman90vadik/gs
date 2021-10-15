@@ -1,0 +1,47 @@
+.products {
+    margin-bottom: 95px;
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 55px;
+    }
+    &__title {
+        text-align: left;
+    }
+    &__arrows {
+        display: flex;
+        align-items: center;
+    }
+    &__btn {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: transparent;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+        &:hover .products__arrow{
+            stroke: $main;
+        }
+        &:focus .products__arrow{
+            stroke: $rad;
+        }
+        &.slick-disabled .products__arrow {
+            stroke: $light-blue;
+        }
+    }
+    &__arrow {
+        fill: none;
+        stroke: $black;
+        stroke-width: 3px;
+        width: 15px;
+        height: 27px;
+        transition: stroke 0.3s ease-in;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+}

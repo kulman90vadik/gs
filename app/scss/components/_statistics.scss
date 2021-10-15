@@ -1,0 +1,73 @@
+.statistics {
+    padding: 40px 0;
+    background-color: $bg-light;
+    margin-bottom: 80px;
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item {
+        text-align: center;
+        max-width: 260px;
+        font-weight: 600;
+        width: 100%;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+    &__number {
+        font-family: $SFProDisplay;
+        margin-bottom: 15px;
+        display: block;
+        font-size: 32px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__description {
+        font-size: 16px;
+        color: $grey;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+
+    &__title {
+        margin-bottom: 33px;
+    }
+    &__holder {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+    &__items{
+        max-width: 31%;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding: 140px 20px 20px;
+        font-size: 20px;
+        color: $grey;
+        box-shadow: inset -1px 0px 0px #C4CDD5, inset 1px 0px 0px #C4CDD5;
+        &::after {
+            position: absolute;
+            content: '';
+            @include bg;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 24px;
+            width: 82px;
+            height: 82px;
+        }
+    }
+    &__items--bestowal {
+        &::after {
+            background-image: url(../images/bestowal.svg);
+        }
+    }
+    &__items--logo {
+        &::after {
+            background-image: url(../images/statistics-logo.svg);
+        }
+    }
+
+}
