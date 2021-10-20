@@ -1,5 +1,12 @@
 .header {
     box-shadow: inset 0px -1px 0px #C4CDD5;
+    background-color: #fff;
+    &--active {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+    }
     &__top {
         background-color: $grey;
         color: #fff;
@@ -7,6 +14,9 @@
         font-size: 16px;
         letter-spacing: 12%;
         font-family: $SFProDisplay;
+        &--hidden {
+            display: none;
+        }
     }
     &__top-inner {
         display: flex;

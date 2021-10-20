@@ -1,0 +1,251 @@
+<aside class="sidebar">
+    <form class="sidebar__form">
+        <button class="sidebar__reset" type="reset">Сбросить фильтры</button>
+        <div class="sidebar__inner">
+            <h3 class="sidebar__subtitle">Фильтр</h3>
+
+            <div class="sidebar-filter">
+                <div class="sidebar-filter__heading sidebar-filter__heading--active">
+                    Цена
+                    <svg class="sidebar-filter__icon sidebar-filter__icon--active">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="sidebar-filter__holder">
+                    <div class="sidebar-filter__price">
+                        <div class="sidebar-filter__min">
+                            <div class="sidebar-filter__min-number"></div>
+                            <span>	
+                                &#8381;
+                            </span>
+                        </div>
+                        <div class="sidebar-filter__max">
+                            <div class="sidebar-filter__max-number"></div>
+                            <span>	
+                                &#8381;
+                            </span>
+                        </div>
+                    </div>
+                    <label class="visually-hidden" for="range">Поле, ползунок для выбора цены</label>
+                    <input class="sidebar-filter__range" type="text" name="range" id="range" data-type="double"
+                    data-min="0"
+                    data-max="85000"
+                    data-from="20000"
+                    data-to="70000"/>
+                </div>
+            </div>
+
+            <div class="sidebar-filter sidebar-filter--active">
+                <div class="sidebar-filter__heading">
+                    Особенности
+                    <svg class="sidebar-filter__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="sidebar-filter__holder sidebar-filter__holder--active">
+                    <ul class="sidebar-filter__list">
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox" checked>
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Электронные кодовые замки
+                                </p>
+                                <div class="sidebar-filter__number">(65)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Биометрические замки
+                                </p>
+                                <div class="sidebar-filter__number">(15)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Замок с отппечатком
+                                </p>
+                                <div class="sidebar-filter__number">(28)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Замок с бесконтактной картой
+                                </p>
+                                <div class="sidebar-filter__number">(45)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Программируемые замки
+                                </p>
+                                <div class="sidebar-filter__number">(8)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Замки на батарейках
+                                </p>
+                                <div class="sidebar-filter__number">(48)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Замки с удаленным доступом
+                                </p>
+                                <div class="sidebar-filter__number">(31)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Bluetooth замки
+                                </p>
+                                <div class="sidebar-filter__number">(4)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Электронные замки для квартиры
+                                </p>
+                                <div class="sidebar-filter__number">(18)</div>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="checkbox">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Электронные цилиндры
+                                </p>
+                                <div class="sidebar-filter__number">(3)</div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-filter sidebar-filter--active">
+                <div class="sidebar-filter__heading">
+                    Цвет
+                    <svg class="sidebar-filter__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="sidebar-filter__holder sidebar-filter__holder--active">
+                    <ul class="sidebar-filter__list-color">
+                        <li class="sidebar-filter__item-color">
+                            <label class="sidebar-filter__label-color sidebar-filter__label-color--red">
+                                <input class="sidebar-filter__input-color" type="checkbox" name="color">
+                                <span class="sidebar-filter__checked-color"></span>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item-color">
+                            <label class="sidebar-filter__label-color sidebar-filter__label-color--grey">
+                                <input class="sidebar-filter__input-color" type="checkbox" name="color">
+                                <span class="sidebar-filter__checked-color"></span>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item-color">
+                            <label class="sidebar-filter__label-color sidebar-filter__label-color--green">
+                                <input class="sidebar-filter__input-color" type="checkbox" name="color">
+                                <span class="sidebar-filter__checked-color"></span>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item-color">
+                            <label class="sidebar-filter__label-color sidebar-filter__label-color--blue">
+                                <input class="sidebar-filter__input-color" type="checkbox" name="color">
+                                <span class="sidebar-filter__checked-color"></span>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item-color">
+                            <label class="sidebar-filter__label-color sidebar-filter__label-color--gold">
+                                <input class="sidebar-filter__input-color" type="checkbox" name="color">
+                                <span class="sidebar-filter__checked-color"></span>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item-color">
+                            <label class="sidebar-filter__label-color sidebar-filter__label-color--pink">
+                                <input class="sidebar-filter__input-color" type="checkbox" name="color">
+                                <span class="sidebar-filter__checked-color"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-filter sidebar-filter--active">
+                <div class="sidebar-filter__heading">
+                    Материал
+                    <svg class="sidebar-filter__icon">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="sidebar-filter__holder sidebar-filter__holder--active">
+                    <ul class="sidebar-filter__list">
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="material">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Латунь
+                                </p>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="material">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Хром
+                                </p>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="material">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Медь
+                                </p>
+                            </label>
+                        </li>
+                        <li class="sidebar-filter__item">
+                            <label class="sidebar-filter__label">
+                                <input class="sidebar-filter__input" type="checkbox" name="material">
+                                <span class="sidebar-filter__checked"></span>
+                                <p class="sidebar-filter__text">
+                                    Олово
+                                </p>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</aside>

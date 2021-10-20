@@ -9,6 +9,7 @@
         max-width: 288px;
         width: 100%;
         height: 320px;
+        display: flex;
     }
     &__images {
         object-fit: cover;

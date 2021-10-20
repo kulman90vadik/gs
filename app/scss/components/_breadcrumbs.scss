@@ -1,0 +1,46 @@
+.breadcrumbs {
+    padding-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    &__item {
+        position: relative;
+        padding-right: 10px;
+        color: #141414;
+        font-size: 16px;
+        &::after {
+            position: absolute;
+            content: '/';
+            right: 0;
+            top: 0;
+        }
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        &:hover {
+            color: $main;
+        }
+        &:focus {
+            color: $rad;
+        }
+        &:active {
+            color: $grey;
+        }
+    }
+    &__link--active {
+        color: #9D9D9D;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+}
