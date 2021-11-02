@@ -1,0 +1,44 @@
+.details {
+    margin-bottom: 100px;
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:not(:last-child) {
+            margin-bottom: 70px;
+        }
+        &:nth-child(even) {
+            .details__images {
+                order: -1;
+            }
+        }
+    }
+    &__info {
+        max-width: 605px;
+        width: 100%;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 24px;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__text {
+        font-size: 18px;
+        color: $grey;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 8;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__images {
+        max-width: 605px;
+        width: 100%;
+        @include bg;
+        height: 564px;
+    }
+}

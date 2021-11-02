@@ -4,6 +4,7 @@
     position: relative;
     display: block;
     outline: transparent;
+    height: 100%;
     transition: transform 0.3s ease-in;
     &__photo {
         max-width: 288px;
@@ -13,6 +14,20 @@
     }
     &__images {
         object-fit: cover;
+    }
+
+    &__rewies {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    &__stars {
+        display: flex;
+        margin-right: 13px;
+    }
+    &__descr {
+        font-size: 13px;
+        color: $grey;
     }
     &__info {
         padding: 10px 12px;

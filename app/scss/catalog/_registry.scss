@@ -27,7 +27,26 @@
         height: 40px;
     }
     &__feature {
-
+        display: flex;
+        align-items: center;
+    }
+    &__description {
+        display: block;
+        margin-right: 5px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__icon-exit {
+        fill: none;
+        width: 10px;
+        height: 10px;
+        stroke-width: 2px;
+        stroke: #E44286;
+        cursor: pointer;
+        transition: stroke 0.3s ease-in;
+        &:hover {
+            
+        }
     }
     &__select {
         max-width: 250px;

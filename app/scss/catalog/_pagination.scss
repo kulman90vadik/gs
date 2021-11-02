@@ -1,0 +1,92 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__btn {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        outline: transparent;
+        &--left {
+            margin-right: 20px;
+        }
+        &--active {
+            cursor: pointer;
+            border-radius: 2px;
+            transition: background-color 0.3s ease-in;
+            & .pagination__icon {
+                stroke: $black;
+                transition: stroke 0.3s ease-in;
+            }
+            &:hover {
+                background-color: $light-grey;
+            }
+            &:hover .pagination__icon{
+                stroke: $main;
+            }
+            &:focus {
+                background-color: transparent;
+            }
+            &:focus .pagination__icon{
+                stroke: $rad;
+            }
+            &:active {
+                background-color: $main;
+            }
+            &:active .pagination__icon{
+                stroke: #fff;
+            }
+        }
+    }
+    &__icon {
+        margin: auto;
+        fill: none;
+        stroke-width: 2px;
+        stroke: $grey;
+        width: 10px;
+        height: 15px;
+        transition: stroke 0.3s ease-in;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    &__item {
+        font-size: 16px;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+    &__link {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        outline: transparent;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        &:not(.pagination__link--active):hover {
+            background-color: $light-grey;
+            color: $main;
+        }
+        &:not(.pagination__link--active):focus {
+            background-color: transparent;
+            color: $rad;
+        }
+        &:not(.pagination__link--active):active {
+            background-color: $main;
+            color: #fff;
+        }
+    }
+    &__link--active {
+        background-color: $main;
+        color: #fff;
+    }
+}

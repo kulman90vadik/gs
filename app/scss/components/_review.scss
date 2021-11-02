@@ -1,0 +1,213 @@
+.review {
+    display: flex;
+    justify-content: space-between;
+    &__inner {
+        max-width: 820px;
+        width: 100%;
+        margin-right: 20px;
+        text-align: center;
+    }
+    &__form {
+        max-width: 390px;
+        width: 100%;
+        border: 1px solid #EAEAEA;
+        padding: 24px;
+    }
+    &__item {
+        border: 1px solid #EAEAEA;
+        margin-bottom: 15px;
+        transition: opacity 0.4s ease-in;
+        &--hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: height 0.4s ease-in;
+            // display: none;
+            height: 0;
+            margin-bottom: 0;
+        }
+        &--show {
+            opacity: 1;
+            height: auto;
+            transition: height 0.4s ease-in, opacity 0.5s ease-in;
+            // display: block;
+            visibility: visible;
+            margin-bottom: 15px;
+        }
+    }
+    &__heading {
+        display: flex;
+        padding: 15px 20px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #EAEAEA;
+    }
+    &__content {
+        padding: 15px 20px 25px 20px;
+    }
+    &__author {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    &__time {
+        font-weight: 300;
+        font-size: 12px;
+        color: $grey;
+    }
+    &__text {
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    &__buttons {
+        display: flex;
+        color: $grey;
+        align-items: center;
+    }
+    &__btn {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &:not(:last-child) {
+            margin-right: 23px;
+        }
+        &:hover .review__icon-description,
+        &:hover .review__icon-arrow-rewies{
+            fill: $grey;
+        }
+        &:hover {
+            color: $grey;
+        }
+        &:focus {
+            color: $main;
+        }
+    }
+    &__icon-arrow-rewies {
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        fill: $main;
+        transition: fill 0.3s ease-in;
+    }
+    &__descr {
+        display: flex;
+        align-items: center;
+        span {
+            margin-right: 5px;
+        }
+    }
+    &__icon-description {
+        width: 13px;
+        height: 12px;
+        margin-right: 5px;
+        fill: $main;
+        transition: fill 0.3s ease-in;
+    }
+    &__add {
+        padding: 0;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: $main;
+        }
+        &:focus {
+            color: $grey;
+        }
+        &--remove {
+            display: none;
+        }
+    }
+
+
+    &__subtitle {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    &__scors {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__score {
+        padding: 0;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: transparent;
+        fill: none;
+        stroke: #C4CDD5;
+        stroke-width: 2px;
+        &:hover .review__icon-star{
+            fill: $gold;
+            stroke: $gold;
+        }
+        &:not(:last-child) {
+            margin-right: 9px;
+        }
+    }
+    &__icon-star {
+        width: 16px;
+        height: 16px;
+        transition: fill 0.3s ease-in, stroke 0.3s ease-in;
+        &--active {
+            fill: $gold;
+            stroke: $gold;
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        outline: transparent;
+        margin-bottom: 20px;
+        height: 48px;
+        padding: 0 15px;
+        border: 1px solid #E4E7E9;
+        &:focus {
+
+        }
+        &::placeholder {
+            color: #adadad;
+        }
+    }
+    &__textarea {
+        height: 140px;
+        resize: none;
+        padding: 12px 15px;
+    }
+    &__submit {
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        font-family: $SFProDisplay;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 500;
+        background-color: $main;
+        padding: 15px;
+        line-height: 1;
+        outline: transparent;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        &:hover {
+            background-color: $light-blue;
+            color: $grey;
+        }
+        &:focus {
+            background-color: $grey;
+            color: $light-blue;
+        }
+        &:active {
+            background-color: #ccc;
+            color: $main;
+        }
+    }
+}
