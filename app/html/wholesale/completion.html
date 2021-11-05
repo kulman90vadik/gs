@@ -1,0 +1,71 @@
+<section class="completion">
+    <div class="container">
+        <div class="completion__inner">
+            <div class="completion__heading">
+                <h2 class="completion__title title">Оформите заявку и мы вам перезвоним</h2>
+                <div class="completion__text">
+                    <p>
+                        Vitae, urna, massa dictumst morbi ut id dui nulla. Purus a velit sem viverra. Nunc ac quis donec nunc eu blandit ante nibh. Sit felis nulla donec mauris quis nulla velit.
+                    </p>
+                </div>
+            </div>
+            <form class="completion__form" action="#">
+                <h3 class="completion__subtitle">Оформление заявки</h3>
+                <ul class="completion__list">
+                    <li class="completion__item">
+                        <label class="completion__label" for="name">Имя</label>
+                        <input class="completion__input" id="name" type="text" placeholder="Ваше имя">
+                    </li>
+                    <li class="completion__item">
+                        <label class="completion__label" for="compani">Название компании</label>
+                        <input class="completion__input" id="compani" type="text" placeholder="Имя Вашей компании">
+                    </li>
+                    <li class="completion__item">
+                        <label class="completion__label" for="tel">Номер телефона</label>
+                        <input class="completion__input" id="tel" type="tel" placeholder="+7 (_ _ _) _ _  _ _  _ _ _">
+                    </li>
+                    <li class="completion__item completion__item--lang">
+                        <label class="completion__label" for="search">Название товара</label>
+                        <div class="completion__holder">
+                            <button class="completion__btn" type="button">
+                                <svg class="completion__icon">
+                                    <use xlink:href="images/sprite.svg#search"></use>
+                                </svg>
+                            </button>
+                            <input class="completion__input completion__input--search" id="search" type="search" placeholder="Введите название или артикул товара">
+                        </div>
+                    </li>
+                    <li class="completion__item">
+                        <label class="completion__label" for="number">Количество</label>
+                        <input class="completion__input" id="number" type="text" placeholder="Количество товара">
+                    </li>
+                </ul>
+
+                <label class="completion__block">
+                    <input class="completion__checkbox" type="checkbox" name="logo">
+                    <span class="completion__check"></span>
+                    <p class="completion__descr">Нанесение персонального логотипа (бесплатно)</p>
+                </label>
+                <label class="completion__block">
+                    <input class="completion__checkbox" type="checkbox" name="work">
+                    <span class="completion__check"></span>
+                    <p class="completion__descr">Помощь в монтажных работах (бесплатно)</p>
+                </label>
+
+                <button class="completion__link link" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__inner">
+            <div class="modal__icon-holder">
+                <svg class="modal__icon">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                </svg>
+            </div>
+            <span class="modal__subtitle">Ваша заявка успешно принята</span>
+            <div class="modal__text">Porttitor vitae ornare aliquet euismod nunc, tincidunt. In non elementum, ornare elementum nisi egestas vel ut. </div>
+            <a class="modal__link link" href="#">Хорошо</a>
+        </div>
+    </div>
+</section>

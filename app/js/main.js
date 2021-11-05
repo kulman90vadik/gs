@@ -1,7 +1,7 @@
 $(function(){
 
 //  start sliders
-    $('.page__slider').slick({
+    $('.page__slider, .project__list').slick({
         dots: true,
         prevArrow: '<button type="button" class="slick-prev"><svg class="icon"><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg class="icon"><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>'
@@ -15,6 +15,44 @@ $(function(){
         infinite: false
     });
 //  finish sliders
+
+//  start modal ///////////////////////////////
+    let completionLink = document.querySelector('.completion__link');
+    let modal = document.querySelector('.modal');
+    let modalLink = document.querySelector('.modal__link');
+    let completionInputs = document.querySelectorAll('.completion__input');
+
+    completionInputs.forEach(elem => {
+        elem.addEventListener('input', function(){
+            if(!(elem.value === '')) {
+                elem.style.backgroundColor = '#87f8a0';
+            } 
+        });
+    });
+
+    completionLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        let count = 0;
+        completionInputs.forEach(elem => {
+            if(elem.value === '') {
+                elem.style.backgroundColor = '#f85252';
+                count++;
+            } 
+        });
+
+        if(count === 0) {
+            modal.classList.add('modal--active');
+        }
+    });
+
+    modalLink.addEventListener('click', function() {
+        modal.classList.remove('modal--active');
+        completionInputs.forEach(elem => {
+            elem.value = '';
+            elem.style.backgroundColor = '#fff';
+        });
+    });
+//  finish modal ////////////////////////////////
     
 //  start header-scroll
     let header = document.querySelector('.header');
@@ -33,6 +71,18 @@ $(function(){
         }
     });
 //  finish header-scroll
+
+//  start menu
+let menuLinks = document.querySelectorAll('.menu__dropdown-link');
+let menuImages = document.querySelector('.menu__photo');
+
+for(let i = 0; i < menuLinks.length; i++) {
+    menuLinks[i].addEventListener('mousemove', function(){
+        let menuLinksItem = menuLinks[i].getAttribute('data');
+        menuImages.setAttribute('src', menuLinksItem);
+    });
+}
+//  finish menu
 
 //  start tabs
 let tabButtons = document.querySelectorAll('.particular-tabs__btn');
@@ -54,18 +104,17 @@ for(let i = 0; i < tabButtons.length; i++) {
 }
 //  finish tabs
 
-
-
 //  start add review
-// let reviewAdd = document.querySelector('.review__add');
-// reviewAdd.addEventListener('click', function(){
-//     let reviewItems = document.querySelectorAll('.review__item--hidden');
-//     reviewItems.forEach(elem => {
-//         elem.classList.add('review__item--show');
-//     });
-//     this.classList.add('review__add--remove')
-// });
+let reviewAdd = document.querySelector('.review__add');
+reviewAdd.addEventListener('click', function(){
+    let reviewItems = document.querySelectorAll('.review__item--hidden');
+    reviewItems.forEach(elem => {
+        elem.classList.add('review__item--show');
+    });
+    this.classList.add('review__add--remove')
+});
 //  finish review
+
 //  start add cards category
     // let categoryLinkAll = document.querySelector('.category__link-all');
     // categoryLinkAll.addEventListener('click', function(e){
@@ -80,77 +129,78 @@ for(let i = 0; i < tabButtons.length; i++) {
 
 
 // оставить отзыв о товаре///////////////////////////////
-// const rewiesItem = {
-//     starNumber: 0,
-//     name: '',
-//     email: '',
-//     text: ''
-// }
+const rewiesItem = {
+    starNumber: 0,
+    name: '',
+    email: '',
+    text: ''
+}
 
-// document.querySelector('.review__submit').addEventListener('click', function(e){
-//     e.preventDefault();
-//     let inputName = document.querySelector('.review__input--name').value;
-//     let inputEmail = document.querySelector('.review__input--email').value;
-//     let inputTextarea = document.querySelector('.review__textarea').value;
-//     if(inputName === '' || inputEmail === '' || inputTextarea === '') {
-//         // console.log('nein');
-//         return false;
-//     }
-//     else {
-//         rewiesItem.name = inputName;
-//         rewiesItem.email = inputEmail;
-//         rewiesItem.text = inputTextarea;
-//     }
-//     let reviewList = document.querySelector('.review__list');
-//     let reviewListItem = `<li class="review__item">
-//         <div class="review__heading">
-//             <span class="review__author">${rewiesItem.name}</span>
-//             <time class="review__time" datetime="20-06-2021">20 августа, 2021</time>
-//             <div class="stars" data-rateyo-rating="${rewiesItem.starNumber}"></div>
-//         </div>
-//         <div class="review__content">
-//             <p class="review__text">${rewiesItem.text}</p>
-//             <div class="review__buttons">
-//                 <button class="review__btn" type="button">
-//                     <svg class="review__icon-arrow-rewies">
-//                         <use xlink:href="images/sprite.svg#arrow-rewies"></use>
-//                     </svg>
-//                     <div class="review__descr">Ответить</div>
-//                 </button>
-//                 <button class="review__btn" type="button">
-//                     <svg class="review__icon-description">
-//                         <use xlink:href="images/sprite.svg#description"></use>
-//                     </svg>
-//                     <div class="review__descr">
-//                         <span>1</span>
-//                         комментарий
-//                     </div>
-//                 </button>
-//             </div>
-//         </div>    
-//     </li>`;
-//     reviewList.innerHTML += reviewListItem;
+document.querySelector('.review__submit').addEventListener('click', function(e){
+    e.preventDefault();
+    let inputName = document.querySelector('.review__input--name').value;
+    let inputEmail = document.querySelector('.review__input--email').value;
+    let inputTextarea = document.querySelector('.review__textarea').value;
+    if(inputName === '' || inputEmail === '' || inputTextarea === '') {
+        // console.log('nein');
+        return false;
+    }
+    else {
+        rewiesItem.name = inputName;
+        rewiesItem.email = inputEmail;
+        rewiesItem.text = inputTextarea;
+    }
+    let reviewList = document.querySelector('.review__list');
+    let reviewListItem = `
+    <li class="review__item">
+        <div class="review__heading">
+            <span class="review__author">${rewiesItem.name}</span>
+            <time class="review__time" datetime="20-06-2021">20 августа, 2021</time>
+            <div class="stars" data-rateyo-rating="${rewiesItem.starNumber}"></div>
+        </div>
+        <div class="review__content">
+            <p class="review__text">${rewiesItem.text}</p>
+            <div class="review__buttons">
+                <button class="review__btn" type="button">
+                    <svg class="review__icon-arrow-rewies">
+                        <use xlink:href="images/sprite.svg#arrow-rewies"></use>
+                    </svg>
+                    <div class="review__descr">Ответить</div>
+                </button>
+                <button class="review__btn" type="button">
+                    <svg class="review__icon-description">
+                        <use xlink:href="images/sprite.svg#description"></use>
+                    </svg>
+                    <div class="review__descr">
+                        <span>1</span>
+                        комментарий
+                    </div>
+                </button>
+            </div>
+        </div>    
+    </li>`;
+    reviewList.innerHTML += reviewListItem;
 
-//     document.querySelector('.review__input--name').value = '';
-//     document.querySelector('.review__input--email').value = '';
-//     document.querySelector('.review__textarea').value = '';
-// });
+    document.querySelector('.review__input--name').value = '';
+    document.querySelector('.review__input--email').value = '';
+    document.querySelector('.review__textarea').value = '';
+});
 
 // // start star
-// let reviewScore = document.querySelectorAll('.review__score');
-// reviewScore.forEach(function(item, index){
+let reviewScore = document.querySelectorAll('.review__score');
+reviewScore.forEach(function(item, index){
 
-//     item.addEventListener('click', function(){
-//         rewiesItem.starNumber = Number(index) + 1;
-//         console.log(rewiesItem.starNumber);
-//         for(let i = 0; i < reviewScore.length; i++) {
-//             reviewScore[i].classList.remove('review__icon-star--active');
-//         }
-//         for(let i = 0; i <= index; i++) {
-//             reviewScore[i].classList.add('review__icon-star--active');
-//         }
-//     });
-// });
+    item.addEventListener('click', function(){
+        rewiesItem.starNumber = Number(index) + 1;
+        console.log(rewiesItem.starNumber);
+        for(let i = 0; i < reviewScore.length; i++) {
+            reviewScore[i].classList.remove('review__icon-star--active');
+        }
+        for(let i = 0; i <= index; i++) {
+            reviewScore[i].classList.add('review__icon-star--active');
+        }
+    });
+});
 // finish star
 // finish оставить отзыв о товаре ///////////////////////////////
 
@@ -230,13 +280,13 @@ for(let i = 0; i < tabButtons.length; i++) {
 
 
 //  start star
-    // $('.stars').rateYo({
-    //     starWidth: '18px',
-    //     normalFill: '#A0A0A0',
-    //     ratedFill: '#F6AB3A',
-    //     spacing: '8px',
-    //     readOnly: true
-    // });
+    $('.stars').rateYo({
+        starWidth: '18px',
+        normalFill: '#A0A0A0',
+        ratedFill: '#F6AB3A',
+        spacing: '8px',
+        readOnly: true
+    });
 //  finish star
 
 //  start filter
@@ -285,17 +335,7 @@ for(let i = 0; i < tabButtons.length; i++) {
     // });
 //  finish select
 
-//  start menu
-    // let menuLinks = document.querySelectorAll('.menu__dropdown-link');
-    // let menuImages = document.querySelector('.menu__photo');
 
-    // for(let i = 0; i < menuLinks.length; i++) {
-    //     menuLinks[i].addEventListener('mousemove', function(){
-    //         let menuLinksItem = menuLinks[i].getAttribute('data');
-    //         menuImages.setAttribute('src', menuLinksItem);
-    //     });
-    // }
-//  finish menu
 
 
 

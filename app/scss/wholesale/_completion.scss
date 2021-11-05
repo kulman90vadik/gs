@@ -1,0 +1,166 @@
+.completion {
+    background-color: $bg-light; 
+    padding: 80px 0;
+    margin-bottom: 100px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__heading {
+        max-width: 500px;
+        width: 100%;
+        margin-right: 50px;
+    }
+    &__title {
+        margin-bottom: 14px;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+        text-align: left;
+    }
+    &__text {
+        font-size: 16px;
+        color: $grey;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 5;
+        }
+    }
+    &__form {
+        max-width: 677px;
+        width: 100%;
+        padding: 32px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    &__subtitle {
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 24px;
+        font-family: $SFProDisplay;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-bottom: 15px;
+        max-width: 193px;
+        width: 100%;
+        &--lang {
+            max-width: 403px;
+            width: 100%;
+        }
+    }
+    &__label {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    &__input {
+        width: 100%;
+        outline: transparent;
+        padding: 0 12px;
+        height: 44px;
+        border: 1px solid #ebecec;
+        transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
+        &:focus {
+            background-color: $bg-light; 
+            border-color: $bg-light; 
+        }
+        &::placeholder {
+            font-size: 14px;
+            color: #adadad;
+        }
+        &--search {
+            position: absolute;
+            padding: 0 12px 0 44px;
+            left: 0;
+            top: 0;
+        }
+    }
+    &__holder {
+        position: relative;
+        width: 100%;
+        height: 44px;
+    }
+    &__btn {
+        position: absolute;
+        z-index: 5;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        width: 44px;
+        height: 44px;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+        outline: transparent;
+        &:hover .completion__icon{
+            stroke: $main;
+        }
+    }
+    &__icon {
+        margin: auto;
+        fill: none;
+        width: 13px;
+        height: 13px;
+        stroke: #adadad;
+        stroke-width: 2px;
+        transition: stroke 0.3s ease-in;
+    }
+    &__block {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:hover .completion__descr{
+            color: $main;
+        }
+        &:hover .completion__check{
+            border-color: $main;
+        }
+
+    }
+    &__checkbox {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        position: absolute;
+        &:checked + .completion__check {
+            background-image: url(../images/icons/check.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto;
+            border-color: $main;
+        }
+    }
+    &__check {
+        position: absolute;
+        left: 0;
+
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #adadad;
+        transition: border-color 0.3s ease-in;
+    }
+    &__descr {
+        font-size: 16px;
+        transition: color 0.3s ease-in;
+
+    }
+    &__link {
+        display: block;
+        margin-left: auto;
+        border: none;
+        cursor: pointer;
+    }
+}
+

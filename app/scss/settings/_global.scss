@@ -92,27 +92,38 @@ body {
 
 }
 
-// .btn {
-//     border: none;
-//     cursor: pointer;
-//     background-color: $link-bc;
-//     border-radius: 21px;
-//     padding: 9px 19px;
-//     color: #fff;
-//     font-weight: 600;
-//     font-size: 12px;
-//     outline: transparent;
-//     transition: background-color 0.3s ease-in;
-//     &:hover {
-//         background-color: $global;
-//     }
-//     &:focus {
-//         background-color: $link-bc;
-//     }
-//     &:active {
-//         background-color: $pink;
-//     }
-// }
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+.about-subtitle {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 18px;
+    color: $main;
+    padding-bottom: 5px;
+    position: relative;
+    margin-bottom: 16px;
+    font-family: $SFProDisplay;
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $main;
+    }
+}
+
+
+// @include lineClamp;
+// -webkit-line-clamp: 1;
 
 // .menu--active::-webkit-scrollbar {
 //     width: 15px;
@@ -128,3 +139,6 @@ body {
 //     cursor: pointer;
 // }
 
+// <svg class="menu__icon" aria-label="Выподащий список">
+//     <use xlink:href="images/sprite.svg#arrow-down"></use>
+// </svg>

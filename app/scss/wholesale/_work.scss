@@ -1,0 +1,57 @@
+.work {
+    margin-bottom: 120px;
+    &__title {
+        text-align: left;
+        margin-bottom: 60px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+    &__item {
+        max-width: 393px;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    &__photo {
+        width: 100%;
+        height: 260px;
+        display: flex;
+        margin-bottom: 12px;
+        position: relative;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+    &__number {
+        background-color: $main;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        right: 10px;
+        top: -10px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    &__name {
+        display: block;
+        margin-bottom: 12px;
+        font-weight: 500;
+        font-size: 20px;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__description {
+        color: $grey;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 3;
+        }
+    }
+}    

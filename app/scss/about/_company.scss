@@ -1,0 +1,114 @@
+.company {
+    margin-bottom: 100px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__popup {
+        position: relative;
+        margin-right: 40px;
+        max-width: 665px;
+        width: 100%;
+        height: 485px;
+        &::after,
+        &::before {
+            position: absolute;
+            content: '';
+            @include bg;
+            background-image: url(../images/decor-about.svg);
+            width: 94px;
+            height: 112px;
+            z-index: -1;
+        }
+        &::after {
+            left: 0;
+            top: 0;
+        }
+        &::before {
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &__video {
+        display: block;
+        max-width: 605px;
+        width: 100%;
+        height: 425px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid transparent;
+        outline: transparent;
+        transition: box-shadow 0.3s ease-in;
+        &:hover {
+            box-shadow: 0 0 11px rgb(134, 134, 134);
+        }
+        &:focus {
+            border-color: $grey;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        padding: 0;
+        background-color: rgba(#fff, 0.4);
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        border-radius: 50%;
+        outline: transparent;
+        transition: background-color 0.3s ease-in;
+        &:hover {
+            background-color: rgba(#fff, 0.7);
+        }
+        &:focus {
+            background-color: rgba(109, 109, 109, 0.7);
+        }
+    }
+    &__icon {
+        width: 18px;
+        height: 21px;
+        margin: auto;
+        fill: #fff;
+    }
+    &__info {
+        max-width: 495px;
+        width: 100%;
+    }
+    &__title {
+        margin-bottom: 16px;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+        text-align: left;
+        mark {
+            position: relative;
+            color: $main;
+            background-color: transparent;
+            &::after {
+                position: absolute;
+                z-index: -1;
+                content: '';
+                width: 87%;
+                height: 100%;
+                right: 0;
+                top: 0;
+                background-color: #eff7ff;
+            }
+        }
+    }
+    &__text {
+        color: $grey;
+        max-width: 455px;
+        width: 100%;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 4;
+        }
+    }
+}
