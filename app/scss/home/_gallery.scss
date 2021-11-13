@@ -5,12 +5,28 @@
     }
     &__title {
         margin-bottom: 65px;
+        @include max($lg) {
+            margin-bottom: 15px;
+        }    
+        @include max($md) {
+            margin-bottom: 5px;
+        }  
     }
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 40px;
         margin-bottom: 50px;
+        @include max($xl) {
+            grid-gap: 20px;
+            margin-bottom: 30px;
+        } 
+        @include max($lg) {
+            grid-gap: 9px;
+        } 
+        @include max($md) {
+            grid-template-columns: repeat(1, 1fr);
+        } 
     }
     &__item {
         height: 470px;
@@ -19,6 +35,23 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
+        @include bg;
+        @include max($xl) {
+            height: 370px;
+            padding: 20px;
+        } 
+        @include max($lg) {
+            height: 290px;
+            padding: 10px;
+            background-size: contain;
+        } 
+        @include max($md) {
+            background-color: #fafafa;
+            height: 250px;
+        } 
+        @include max($s) {
+            height: 320px;
+        } 
     }
     &__name {
         display: block;
@@ -27,6 +60,10 @@
         font-size: 22px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($lg) {
+            margin-bottom: 5px;
+            font-size: 17px;
+        } 
     }
     &__link {
         padding: 12px 78px;
@@ -53,8 +90,17 @@
             color: $grey;
             border-color: $light-blue;
         }
+        @include max($lg) {
+            padding: 6px 47px;
+        } 
     }
     &__category {
         display: inline-block;
+    }
+    @include max($xl) {
+        margin-bottom: 45px;
+    }
+    @include max($md) {
+        margin-bottom: 30px;
     }
 }

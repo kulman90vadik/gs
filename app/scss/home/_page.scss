@@ -1,20 +1,5 @@
 .page {
     background-color: #fafafa;
-    // & .swiper {
-    //     // overflow: hidden;
-    //     width: 100%;
-        
-    // }
-    // & .swiper-wrapper {
-    //     display: flex;
-    //     width: 100%;
-    //     height: 100%;
-    // }
-    // & .swiper-slide {
-    //     width: 100%;
-    //     height: 100%;
-    //     flex-shrink: 0;
-    // }
     &__slider {
         & .slick-dots {
             position: absolute;
@@ -22,8 +7,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            bottom: 55px;
+            bottom: 20px;
             width: 100%;
+            @include max($lg) {
+                justify-content: end;
+                right: 10px;
+            }
+            @include max($s) {
+                bottom: 10px;
+            }
             li {
                 width: 24px;
                 padding: 0;
@@ -34,6 +26,9 @@
                 transition: border-color 0.3s ease-in;
                 &:not(:last-child) {
                     margin-right: 18px;
+                    @include max($md) {
+                        margin-right: 10px;
+                    }
                 }
                 &:hover button {
                     background-color: $main;
@@ -67,7 +62,7 @@
         & .slick-arrow {
             position: absolute;
             z-index: 5;
-            bottom: 50px;
+            bottom: 15px;
             border: none;
             background-color: transparent;
             padding: 0;
@@ -104,6 +99,12 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        @include max($lg) {
+            height: calc(100vh - 90px);
+        }
+        @include max($sm) {
+            flex-direction: column;
+        }
     }
     &__bg {
         max-width: 515px;
@@ -111,6 +112,31 @@
         height: 521px;
         @include bg;
         margin-right: 40px;
+        @include max($xl) {
+            max-width: 425px;
+            height: 400px;
+        }
+        @include max($lg) {
+            max-width: 260px;
+            height: 250px;
+            margin-right: 10px;
+        }
+        @include max($lg) {
+            max-width: 210px;
+            height: 210px;
+            margin-right: 5px;
+        }
+        @include max($sm) {
+            margin-right: 0;
+            margin-bottom: 10px;
+            max-width: 290px;
+            height: 290px;
+        }
+        @include max($s) {
+            margin-bottom: 5px;
+            max-width: 185px;
+            height: 173px;
+        }
     }
     &__content {
         display: flex;
@@ -122,9 +148,15 @@
         font-weight: 600;
         max-width: 600px;
         width: 100%;
-        margin-bottom: 20px;
         @include lineClamp;
         -webkit-line-clamp: 2;
+        @include max($lg) {
+            font-size: 20px;
+            line-height: 1.1;
+        }
+        @include max($s) {
+            font-size: 18px;
+        }   
     }
     &__text {
         max-width: 290px;
@@ -135,9 +167,21 @@
             -webkit-line-clamp: 3;
             &:not(:last-child) {
                 margin-bottom: 15px;
+                @include max($lg) {
+                    margin-bottom: 5px;
+                }
+            }
+            &:last-child {
+                @include max($md) {
+                    display: none;
+                }
             }
         }
         margin-bottom: 30px;
+        @include max($lg) {
+            margin-bottom: 10px;
+            max-width: 100%;
+        }
     }
     &__price{
         flex-wrap: wrap;
@@ -151,6 +195,15 @@
             @include lineClamp;
             -webkit-line-clamp: 1;
         }
+        @include max($md) {
+            margin-bottom: 3px;
+        }
+        @include max($sm) {
+            margin-bottom: 23px;
+        }
+        @include max($s) {
+            margin-bottom: 5px;
+        }    
     }
 }
 

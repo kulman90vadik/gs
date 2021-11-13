@@ -5,15 +5,24 @@
     &__title {
         margin-bottom: 60px;
         text-align: left;
+        @include max($xl) {
+            margin-bottom: 20px;
+        }
     }
     &__inner {
         display: flex;
         justify-content: space-between;
+        @include max($lg) {
+            flex-direction: column;
+        }
     }
     &__list {
         max-width: 553px;
         width: 100%;
         padding-top: 13px;
+        @include max($lg) {
+            max-width: 100%;
+        }
     }
     &__item {
         &:not(:last-child) {
@@ -28,6 +37,20 @@
         height: 560px;
         margin-right: 30px;
         margin-left: -110px;
+        @include max($lg) {
+            height: 420px;
+            margin: 0 0 15px;
+            max-width: 100%;
+        }
+        @include max($md) {
+            height: 290px;
+        }
+        @include max($sm) {
+            height: 220px;
+        }
+        @include max($s) {
+            height: 190px;
+        }
     }
     &__name {
         margin-bottom: 21px;
@@ -87,6 +110,11 @@
                 top: 4.5px;
             }
         }
+        @include max($s) {
+            font-size: 18px;
+            line-height: 1.2;
+            padding-left: 62px;
+        }
     }
     &__text {
         padding: 5px 0 20px 72px;
@@ -100,15 +128,32 @@
             width: 1px;
             top: 0;
             background-color:#C4CDD5;
+            @include max($s) {
+               display: none;
+            }
         }
         p {
             @include lineClamp;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 4;
         }
         &--bottom {
             &::after {
                 display: none;
             }
         }
+        @include max($lg) {
+            padding: 5px 5px 5px 72px;
+        }
+        @include max($s) {
+            padding: 6px;
+        }
+    }
+    @include max($xl) {
+        margin-bottom: 50px;
+        padding-top: 50px;
+    }
+    @include max($lg) {
+        margin-bottom: 25px;
+        padding-top: 25px;
     }
 }

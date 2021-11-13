@@ -12,6 +12,9 @@
         outline: transparent;
         &--left {
             margin-right: 20px;
+            @include max($sm) {
+                margin-right: 8px;
+            }
         }
         &--active {
             cursor: pointer;
@@ -40,6 +43,10 @@
                 stroke: #fff;
             }
         }
+        @include max($sm) {
+            width: 30px;
+            height: 30px;
+        }
     }
     &__icon {
         margin: auto;
@@ -54,11 +61,22 @@
         display: flex;
         align-items: center;
         margin-right: 20px;
+        @include max($sm) {
+            margin-right: 8px;
+        }
     }
     &__item {
         font-size: 16px;
         &:not(:last-child) {
             margin-right: 8px;
+            @include max($sm) {
+                margin-right: 5px;
+            }
+        }
+    }
+    &__item--mobile {
+        @include max($sm) {
+            display: none;
         }
     }
     &__link {
@@ -83,6 +101,10 @@
         &:not(.pagination__link--active):active {
             background-color: $main;
             color: #fff;
+        }
+        @include max($sm) {
+            width: 30px;
+            height: 30px;
         }
     }
     &__link--active {

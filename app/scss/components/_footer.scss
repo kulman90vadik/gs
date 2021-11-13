@@ -7,10 +7,26 @@
         justify-content: space-between;
         padding-bottom: 50px;
         border-bottom: 1px solid rgba(#fff, 0.09);
+        @include max($lg) {
+            padding-bottom: 25px;
+        } 
+        @include max($lg) {
+            display: block;
+        } 
     }
     &__holder {
         max-width: 350px;
         width: 100%;
+        @include max($xl) {
+            max-width: 170px;
+        } 
+        @include max($lg) {
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        } 
     }
     &__logo {
         display: block;
@@ -18,7 +34,14 @@
         & .logo__images {
             width: 105px;
             height: 88px;
+            @include max($lg) {
+                width: 51px;
+                height: 42px;
+            } 
         }
+        @include max($lg) {
+            margin-bottom: 0;
+        } 
     }
     & .social {
         display: flex;
@@ -62,10 +85,26 @@
         justify-content: space-between;
         color: #fff;
         width: 100%;
+        @include max($md) {
+            flex-wrap: wrap;
+        } 
     }
     &__items {
-        max-width: 200px;
+        max-width: 190px;
         width: 100%;
+        &:not(:last-child) {
+            margin-right: 10px;
+            @include max($md) {
+                margin-right: 0;
+            } 
+        }
+        @include max($md) {
+            max-width: 48%;
+            margin-bottom: 15px;
+        } 
+        @include max($s) {
+            max-width: 100%;
+        } 
     }
     &__subtitle {
         margin-bottom: 24px;
@@ -73,6 +112,10 @@
         font-size: 18px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($s) {
+            text-align: center;
+            margin-bottom: 12px;
+        }
     }
     &__link {
         display: block;
@@ -81,9 +124,12 @@
         outline: transparent;
         transition: color 0.3s ease-in;
         @include lineClamp;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         &:not(:last-child) {
             margin-bottom: 16px;
+            @include max($s) {
+                margin-bottom: 6px;
+            }
         }
         &:hover {
             color: $main;
@@ -111,5 +157,11 @@
         font-family: $SFProDisplay;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($md) {
+            padding: 15px 0;
+        } 
     }
+    @include max($lg) {
+        padding-top: 25px;
+    } 
 }

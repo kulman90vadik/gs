@@ -72,12 +72,18 @@ body {
         font-weight: 600;
         font-size: 24px;
         margin-right: 12px;
+        @include max($md) {
+            font-size: 18px;
+        }
     }
     &__old {
         font-weight: 300;
         font-size: 22px;
         text-decoration-line: line-through;
         color: #A4A4A4;
+        @include max($md) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -87,8 +93,14 @@ body {
     font-size: 44px;
     line-height: 1.4;
     @include lineClamp;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     color: #000;
+    @include max($lg) {
+        font-size: 35px;
+    }  
+    @include max($md) {
+        font-size: 25px;
+    }  
 
 }
 

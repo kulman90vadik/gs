@@ -12,7 +12,30 @@
     @include('./components/header.html')
     <main class="main">
         @include('./about/company.html')
-        @include('./components/statistics.html')
+        <section class="statistics statistics--about">
+            <div class="container">
+                <ul class="statistics__list">
+                    <li class="statistics__item">
+                        <span class="statistics__number">5,567</span>
+                        <span class="statistics__description">Счастливых клиентов</span>
+                    </li>
+                    <li class="statistics__item">
+                        <span class="statistics__number">1245</span>
+                        <span class="statistics__description">Продуктов на выбор</span>
+                    </li>
+                    <li class="statistics__item">
+                        <span class="statistics__number">372</span>
+                        <span class="statistics__description">Продаж в день</span>
+                    </li>
+                    <li class="statistics__item">
+                        <span class="statistics__number">454</span>
+                        <span class="statistics__description">Лет на рынке</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        @include('./about/mission.html')
+        @include('./about/contacts.html')
     </main>
     @include('./components/footer.html')
     <script src="js/main.min.js"></script>

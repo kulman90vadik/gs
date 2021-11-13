@@ -3,16 +3,30 @@
     &__title {
         text-align: left;
         margin-bottom: 60px;
+        @include max($xl) {
+            margin-bottom: 25px;
+        }
     }
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
+        @include max($lg) {
+            grid-gap: 10px;
+        }
+        @include max($md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
     &__item {
         max-width: 393px;
         width: 100%;
         padding-bottom: 10px;
+        @include max($md) {
+            &:nth-child(even) {
+                margin-left: auto;
+            }
+        }
     }
     &__photo {
         width: 100%;
@@ -20,6 +34,12 @@
         display: flex;
         margin-bottom: 12px;
         position: relative;
+        @include max($lg) {
+            height: 200px;
+        }
+        @include max($md) {
+            height: 260px;
+        }
     }
     &__img {
         width: 100%;
@@ -38,6 +58,11 @@
         align-items: center;
         font-weight: 500;
         font-size: 20px;
+        @include max($lg) {
+            width: 30px;
+            height: 30px;
+            font-size: 17px;
+        }
     }
     &__name {
         display: block;
@@ -46,12 +71,22 @@
         font-size: 20px;
         @include lineClamp;
         -webkit-line-clamp: 2;
+        @include max($lg) {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
     }
     &__description {
         color: $grey;
         p {
             @include lineClamp;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 5;
         }
+    }
+    @include max($xl) {
+        margin-bottom: 50px;
+    }
+    @include max($lg) {
+        margin-bottom: 30px;
     }
 }    

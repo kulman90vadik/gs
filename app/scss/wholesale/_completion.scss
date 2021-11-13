@@ -6,11 +6,19 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include max($xl) {
+            flex-direction: column;
+        }
     }
     &__heading {
-        max-width: 500px;
+        max-width: 480px;
         width: 100%;
-        margin-right: 50px;
+        margin-right: 1px;
+        @include max($xl) {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
     }
     &__title {
         margin-bottom: 14px;
@@ -33,12 +41,27 @@
         background-color: #fff;
         display: flex;
         flex-direction: column;
+        @include max($xl) {
+            max-width: 900px;
+        }
+        @include max($lg) {
+            max-width: 677px;
+        }
+        @include max($md) {
+            max-width: 100%;
+        }
+        @include max($sm) {
+           padding: 10px;
+        }
     }
     &__subtitle {
         margin-bottom: 30px;
         font-weight: 600;
         font-size: 24px;
         font-family: $SFProDisplay;
+        @include max($lg) {
+            margin-bottom: 15px;
+        }
     }
     &__list {
         display: flex;
@@ -49,10 +72,31 @@
         margin-bottom: 15px;
         max-width: 193px;
         width: 100%;
+        @include max($xl) {
+            max-width: 270px;
+        }
+        @include max($lg) {
+            max-width: 193px;
+        }
+        @include max($md) {
+            max-width: 100%;
+            margin-bottom: 5px;
+        }
         &--lang {
             max-width: 403px;
             width: 100%;
+            @include max($xl) {
+                max-width: 554px;
+            }
+            @include max($lg) {
+                max-width: 403px;
+            }
+            @include max($md) {
+                max-width: 100%;
+                margin-bottom: 5px;
+            }
         }
+       
     }
     &__label {
         display: block;
@@ -73,12 +117,18 @@
         &::placeholder {
             font-size: 14px;
             color: #adadad;
+            @include max($s) {
+                font-size: 13px;
+            }
         }
         &--search {
             position: absolute;
             padding: 0 12px 0 44px;
             left: 0;
             top: 0;
+            @include max($s) {
+                padding: 0 8px 0 34px;
+            }
         }
     }
     &__holder {
@@ -101,6 +151,9 @@
         outline: transparent;
         &:hover .completion__icon{
             stroke: $main;
+        }
+        @include max($s) {
+            width: 34px;
         }
     }
     &__icon {
@@ -144,7 +197,7 @@
     &__check {
         position: absolute;
         left: 0;
-
+        top: 4px;
         display: block;
         width: 16px;
         height: 16px;
@@ -162,5 +215,10 @@
         border: none;
         cursor: pointer;
     }
+    @include max($xl) {
+        margin-bottom: 50px;
+        padding: 40px 0;
+    }
+    
 }
 

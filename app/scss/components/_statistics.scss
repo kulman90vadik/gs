@@ -6,6 +6,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include max($lg) {
+            flex-wrap: wrap;
+        }
     }
     &__item {
         text-align: center;
@@ -14,6 +17,15 @@
         width: 100%;
         &:not(:last-child) {
             margin-right: 10px;
+            @include max($lg) {
+                margin-right: 0;
+            }
+        }
+        @include max($lg) {
+            max-width: 40%;
+        }
+        @include max($sm) {
+            max-width: 100%;
         }
     }
     &__number {
@@ -23,6 +35,9 @@
         font-size: 32px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($sm) {
+            margin-bottom: 0;
+        }
     }
     &__description {
         font-size: 16px;
@@ -69,5 +84,21 @@
             background-image: url(../images/statistics-logo.svg);
         }
     }
-
+    &--about {
+        padding: 100px 0;
+        background-color: #0D2436;
+        & .statistics__number {
+            color: #fff;
+            font-weight: 600;
+            font-size: 72px;
+            margin-bottom: 5px;
+        }
+        & .statistics__description {
+            font-size: 18px;
+        }
+    }
+    @include max($lg) {
+        margin-bottom: 40px;
+        padding: 20px 0;
+    }
 }

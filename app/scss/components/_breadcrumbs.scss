@@ -43,4 +43,7 @@
         @include lineClamp;
         -webkit-line-clamp: 1;
     }
+    @include max($lg) {
+        margin-bottom: 20px;
+    }
 }

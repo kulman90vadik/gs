@@ -1,0 +1,104 @@
+.contacts {
+    background-color: $bg-light;
+    padding: 100px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        max-width: 500px;
+        width: 100%;
+        margin-right: 20px;
+    }
+    &__address {
+        max-width: 650px;
+        width: 100%;
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 10px;
+        display: block;
+    }
+    &__text {
+        font-size: 16px;
+        color: $grey;
+        margin-bottom: 30px;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 4;
+        }
+    }
+    &__input {
+        width: 100%;
+        display: block;
+        outline: transparent;
+        height: 50px;
+        background-color: rgba(22, 28, 36, 0.04);
+        padding: 0 15px;
+        border: none;
+        transition:  background-color 0.3s ease-in;
+        margin-bottom: 20px;
+        &::placeholder {
+            font-size: 16px;
+            color: $grey;
+        }
+        &:focus {
+            background-color: rgba(37, 47, 59, 0.4);
+        }
+    }
+    &__btn {
+        border: none;
+        cursor: pointer;
+        &:active {
+            background-color: $grey;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 209px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    &__name {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 18px;
+        display: block;
+    }
+    &__links {
+        margin-bottom: auto;
+    }
+    &__link {
+        font-size: 16px;
+        display: block;
+        color: $grey;
+        margin-bottom: 10px;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+        &:hover {
+            color: $main;
+        }
+        &:focus {
+            color: $black;
+        }
+        &:active {
+            color: $rad;
+        }
+    }
+    &__photo {
+        @include bg;
+        max-width: 209px;
+        width: 100%;
+        height: 156px;
+    }
+}

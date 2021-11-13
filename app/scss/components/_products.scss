@@ -5,9 +5,19 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 55px;
+        @include max($xl) {
+            margin-bottom: 25px;
+        }   
+        
     }
     &__title {
         text-align: left;
+        @include max($md) {
+            margin-right: 15px;
+        }
+        @include max($sm) {
+            font-size: 22px;
+        }
     }
     &__arrows {
         display: flex;
@@ -21,6 +31,9 @@
         cursor: pointer;
         &:not(:last-child) {
             margin-right: 50px;
+            @include max($md) {
+                margin-right: 15px;
+            }
         }
         &:hover .products__arrow{
             stroke: $main;
@@ -43,5 +56,20 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+        @include max($xl) {
+            max-width: 890px;
+        } 
+        @include max($lg) {
+            max-width: 590px;
+        } 
+        @include max($md) {
+            max-width: 288px;
+        } 
     }
+    @include max($xl) {
+        margin-bottom: 35px;
+    }    
 }

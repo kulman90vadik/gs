@@ -23,11 +23,23 @@
         align-items: center;
         justify-content: flex-end;
         padding: 5px 0;
+        @include max($lg) {
+            justify-content: space-between;
+        }
     }
     &__text {
         margin-right: 200px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($lg) {
+            margin-right: 0;
+        }
+        @include max($md) {
+            font-size: 13px;
+        }
+        @include max($sm) {
+            display: none;
+        }
     }
     &__link {
         padding-bottom: 0 2px 2px;
@@ -64,6 +76,9 @@
         align-items: center;
         justify-content: space-between;
         padding: 20px 0;
+        @include max($lg) {
+            padding: 7px 0;
+        }
     }
     &__tel {
         display: flex;
@@ -79,12 +94,22 @@
         &:focus .header__tel-text{
             color: $rad;
         }
+        @include max($lg) {
+            margin-bottom: 7px;
+            margin-right: 10px;
+        }
+        @include max($md) {
+            margin-left: auto;
+        }
     }
     &__tel-icon {
         width: 19px;
         height: 19px;
         fill: $main;
         margin-right: 7px;
+        @include max($lg) {
+            margin-right: 0;
+        }
     }
     &__tel-text {
         font-size: 18px;
@@ -93,6 +118,9 @@
         transition: color 0.3s ease-in;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($lg) {
+            display: none;
+        }
     }
     &__heart-icon {
         width: 23px;
@@ -110,6 +138,14 @@
     }
     &__heart {
         margin-right: 34px;
+        @include max($lg) {
+            margin-right: 10px;
+        }
+    }
+    &__corb {
+        @include max($md) {
+            margin-right: 10px;
+        }
     }
     &__corb,
     &__heart {
@@ -122,6 +158,50 @@
         }
         &:focus .header__icon{
             stroke: $rad;
+        }
+    }
+    &__burger {
+        height: 27px;
+        width: 35px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 2px;
+        flex-direction: column;
+        justify-content: space-between;
+        outline: transparent;
+        display: none;
+        position: relative;
+        z-index: 555;
+        &:hover .header__burger-item{
+            background-color: rgba($main, 0.7);
+        }
+        &:focus .header__burger-item{
+            background-color: $grey;
+        }
+        @include max($md) {
+            display: flex;
+        }
+    }
+    &__burger-item {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $main;
+        transition: transform 0.3s ease-in,  background-color 0.3s ease-in;
+        &--active {
+            position: absolute;
+            top: 13px;
+            transition: transform 0.3s ease-in;
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
         }
     }
 }
@@ -139,10 +219,19 @@
     &__list {
         display: flex;
         align-items: center;
+        @include max($md) {
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
     }
     &__item {
         &:not(:last-child) {
             margin-right: 30px;
+            @include max($md) {
+                margin-right: 0;
+            }
         }
     }
     &__item--catalog {
@@ -180,6 +269,9 @@
         &:focus .menu__icon{
             stroke: $rad;
         }
+        @include max($md) {
+            color: #fff;
+        }  
     }
     &__head {
         display: flex;
@@ -193,6 +285,9 @@
         stroke: $black;
         margin-left: 10px;
         transition: stroke 0.3s ease-in, transform 0.3s ease-in;
+        @include max($md) {
+            stroke: #fff;
+        }    
     }
     &__holder {
         position: absolute;
@@ -210,15 +305,33 @@
         transform: scale(0);
         transform-origin: top left;
         transition: transform 0.5s ease-in-out;
+        @include max($lg) {
+            left: -115px;
+            padding: 20px;
+            width: 555px;
+        }
+        @include max($md) {
+            max-width: 300px;
+            left: -102%;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
     }
     &__dropdown {
         max-width: 345px;
         width: 100%;
         margin-right: 7px;
+        @include max($md) {
+            max-width: 300px;
+            margin-right: 0;
+        }
     }
     &__dropdown-item {
         &:not(:last-child) {
             margin-bottom: 20px;
+            @include max($lg) {
+                margin-bottom: 7px;
+            }
         }
     }
     &__dropdown-link {
@@ -252,10 +365,36 @@
         max-width: 288px;
         width: 100%;
         height: 300px;
+        display: flex;
+        @include max($lg) {
+            height: 250px;
+            max-width: 238px;
+        }
+        @include max($md) {
+            display: none;
+        }
     }
     &__photo {
         object-fit: cover;
+        width: 100%;
         margin: auto;
+    }
+
+    @include max($md) {
+        position: absolute;
+        height: 100vh;
+        z-index: 55;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(#000, 0.9);
+        transform: translateY(-110%);
+        transition: transform 0.3s ease-in;
+    }
+    &--active {
+        transform: translateY(0);
+        transition: transform 0.3s ease-in;
     }
 }
 

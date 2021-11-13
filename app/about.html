@@ -116,7 +116,11 @@
                         <use xlink:href="images/sprite.svg#corb"></use>
                     </svg>
                 </a>    
-
+                <button class="header__burger" type="button">
+                    <span class="header__burger-item"></span>
+                    <span class="header__burger-item"></span>
+                    <span class="header__burger-item"></span>
+                </button>
             </div>
         </div>
     </div>
@@ -160,27 +164,102 @@
     </div>
 </section>
 
-<!--  -->
-        <section class="statistics">
+        <section class="statistics statistics--about">
+            <div class="container">
+                <ul class="statistics__list">
+                    <li class="statistics__item">
+                        <span class="statistics__number">5,567</span>
+                        <span class="statistics__description">Счастливых клиентов</span>
+                    </li>
+                    <li class="statistics__item">
+                        <span class="statistics__number">1245</span>
+                        <span class="statistics__description">Продуктов на выбор</span>
+                    </li>
+                    <li class="statistics__item">
+                        <span class="statistics__number">372</span>
+                        <span class="statistics__description">Продаж в день</span>
+                    </li>
+                    <li class="statistics__item">
+                        <span class="statistics__number">454</span>
+                        <span class="statistics__description">Лет на рынке</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="mission">
+    <h2 class="visually-hidden">Наша миссия</h2>
     <div class="container">
-        <ul class="statistics__list">
-            <li class="statistics__item">
-                <span class="statistics__number">5,567</span>
-                <span class="statistics__description">Счастливых клиентов</span>
-            </li>
-            <li class="statistics__item">
-                <span class="statistics__number">1245</span>
-                <span class="statistics__description">Продуктов на выбор</span>
-            </li>
-            <li class="statistics__item">
-                <span class="statistics__number">372</span>
-                <span class="statistics__description">Продаж в день</span>
-            </li>
-            <li class="statistics__item">
-                <span class="statistics__number">454</span>
-                <span class="statistics__description">Лет на рынке</span>
-            </li>
-        </ul>
+        <div class="mission__inner">
+            <div class="mission__info">
+                <span class="about-subtitle">Наша миссия</span>
+                <blockquote class="mission__blockquote">
+                    Sit tempor ante justo amet duis. Ultricies cras eleifend elit, posuere et risus non. Id et ut pellentesque consequat, amet erat gravida euismod pharetra.
+                </blockquote>
+            </div>
+            <div class="mission__photos" style="background-image: url(images/mission-bigBg.jpg);">
+                <div class="mission__images" style="background-image: url(images/mission-smallBg.jpg);"></div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="contacts">
+    <h2 class="visually-hidden">Основные контакты для связи</h2>
+    <div class="container">
+        <div class="contacts__inner">
+            <div class="contacts__content">
+                <h3 class="contacts__subtitle">Остались вопросы?</h3>
+                <div class="contacts__text">
+                    <p>
+                        Если у вас возникли какие-то вопросы по поводу оптовых заказов, заполните форму и мы Вам перезвоним.
+                    </p>
+                </div>
+                <form class="contacts__form" action="#">
+                    <label class="visually-hidden" for="name">Текстовое поля для ввода имени</label>
+                    <input class="contacts__input" type="text" id="name" placeholder="Ваше имя" id="name">
+                    <label class="visually-hidden" for="email">Текстовое поля для ввода вашей почты</label>
+                    <input class="contacts__input" type="email" id="email" placeholder="Ваш Email" id="email">
+                    <button class="link contacts__btn" type="submit">Отправить</button>
+                </form>
+            </div>
+            <address class="contacts__address">
+                <h3 class="contacts__subtitle">Контакты</h3>
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <span class="contacts__name">Наш адрес</span>
+                        <div class="contacts__links">
+                            <a class="contacts__link" href="#">
+                                Россия, Ростов-на-Дону ул. Богачева, 16
+                            </a>
+                        </div>
+                        <div class="contacts__photo" style="background-image: url(images/contacts-photo-1.jpg);"></div>
+                    </li>
+                    <li class="contacts__item">
+                        <span class="contacts__name">Телефоны</span>
+                        <div class="contacts__links">
+                            <a class="contacts__link" href="tel:+79885650038">
+                                +7 (988) 565 00 38
+                            </a>
+                            <a class="contacts__link" href="tel:+375336628256">
+                                +375 33 662 82 56
+                            </a>
+                        </div>
+                        <div class="contacts__photo" style="background-image: url(images/contacts-photo-2.jpg);"></div>
+                    </li>
+                    <li class="contacts__item">
+                        <span class="contacts__name">Email</span>
+                        <div class="contacts__links">
+                            <a class="contacts__link" href="mailto:vladpertcev@mail.ru">
+                                vladpertcev@mail.ru
+                            </a>
+                            <a class="contacts__link" href="mailto:korobko416@gmail.com">
+                                korobko416@gmail.com
+                            </a>
+                        </div>
+                        <div class="contacts__photo" style="background-image: url(images/contacts-photo-3.jpg);"></div>
+                    </li>
+                </ul>
+            </address>
+        </div>
     </div>
 </section>
     </main>

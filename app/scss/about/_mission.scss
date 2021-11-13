@@ -1,0 +1,65 @@
+.mission  {
+    margin-bottom: 130px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info {
+        max-width: 501px; 
+        width: 100%;
+        margin-right: 20px;
+    }
+    &__blockquote {
+        position: relative;
+        padding-top: 40px;
+        font-style: italic;
+        font-size: 24px;
+        color: $grey;
+        @include lineClamp;
+        -webkit-line-clamp: 6;
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include bg;
+            width: 32px;
+            height: 27px;
+            background-image: url(../images/mission.svg);
+        }
+    }
+    &__photos {
+        position: relative;
+        max-width: 605px;
+        width: 100%;
+        height: 425px;
+        @include bg;
+        &::after,
+        &::before {
+            width: 94px;
+            height: 112px;
+            position: absolute;
+            @include bg;
+            content: '';
+            background-image: url(../images/decor-about.svg);
+            z-index: -1;
+        }
+        &::after {
+            top: -30px;
+            left: -30px;
+        }
+        &::before {
+            bottom: -30px;
+            right: -30px;
+        }
+    }
+    &__images {
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        max-width: 202px;
+        width: 100%;
+        height: 280px;
+        @include bg;
+    }
+}

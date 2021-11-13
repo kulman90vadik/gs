@@ -53,6 +53,8 @@
     }
     &__link-all {
         display: inline-block;
+        cursor: pointer;
+        border: none;
     }
     &__link--remove {
         display: none;

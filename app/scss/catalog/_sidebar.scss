@@ -24,11 +24,17 @@
             background-color: $main;
             color: #fff;
         }
+        @include max($lg) {
+            margin-bottom: 10px;
+        }
     }
     &__inner {
         padding: 24px;
         border: 1px solid $light-grey;
         border-radius: 2px;
+        @include max($xl) {
+            padding: 15px;
+        }
     }
     &__subtitle {
         margin-bottom: 27px;
@@ -37,6 +43,9 @@
         display: block;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($lg) {
+            margin-bottom: 5px;
+        }
     }
 
 
@@ -49,6 +58,9 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            @include max($lg) {
+                max-width: 200px;
+            }
         }
         &__item-color {
             margin-bottom: 10px;
@@ -126,6 +138,9 @@
             }
             &--active {
                 color: $main;
+            }
+            @include max($lg) {
+                margin-bottom: 5px;
             }
         }
         &__icon {
@@ -216,6 +231,9 @@
             @include lineClamp;
             -webkit-line-clamp: 2;
             transition: color 0.3s ease-in;
+            @include max($lg) {
+                max-width: 100%;
+            }
         }
         &__number {
             font-size: 12px;
@@ -256,6 +274,16 @@
         .irs-single {
             display: none;
         }
+    }
+
+    @include max($xl) {
+        margin-right: 15px;
+        max-width: 245px;
+    }
+    @include max($lg) {
+        margin-right: 0;
+        margin-bottom: 10px;
+        max-width: 100%;
     }
 }
 

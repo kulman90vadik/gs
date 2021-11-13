@@ -22,6 +22,8 @@
 @import './components/details';
 @import './product/particular';
 @import './components/review';
+
+
 @import './product/particular-tabs';
 @import './wholesale/completion';
 @import './wholesale/modal';
@@ -29,9 +31,13 @@
 @import './wholesale/skills';
 @import './wholesale/project';
 @import './about/company';
+@import './about/mission';
+@import './about/contacts';
 
 
-
+// @include max($lg) {
+//     margin-right: 0;
+// }
 
 
 
