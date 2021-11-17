@@ -24,6 +24,7 @@
 @import './components/review';
 
 
+
 @import './product/particular-tabs';
 @import './wholesale/completion';
 @import './wholesale/modal';
@@ -33,6 +34,8 @@
 @import './about/company';
 @import './about/mission';
 @import './about/contacts';
+
+@import './components/modal-corb';
 
 
 // @include max($lg) {

@@ -6,12 +6,23 @@
         width: 100%;
         margin-right: 20px;
         text-align: center;
+        @include max($lg) {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
     }
     &__form {
         max-width: 390px;
         width: 100%;
         border: 1px solid #EAEAEA;
         padding: 24px;
+        @include max($lg) {
+            max-width: 100%;
+        }
+        @include max($md) {
+            padding: 14px;
+        }
     }
     &__item {
         border: 1px solid #EAEAEA;
@@ -40,22 +51,46 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #EAEAEA;
+        @include max($md) {
+            padding: 14px;
+            flex-wrap: wrap;
+        }
     }
     &__content {
         padding: 15px 20px 25px 20px;
+        @include max($md) {
+            padding: 14px;
+        }
     }
     &__author {
         font-weight: 500;
         font-size: 18px;
+        @include max($md) {
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+        @include max($s) {
+            margin-right: 5px;
+        }
     }
     &__time {
         font-weight: 300;
         font-size: 12px;
         color: $grey;
+        @include max($md) {
+            margin-left: auto;
+            margin-right: 50px;
+        }
+        @include max($s) {
+            margin-right: 0;
+        }
     }
     &__text {
         margin-bottom: 25px;
         text-align: left;
+        @include max($md) {
+            margin-bottom: 10px;
+        }
     }
     &__buttons {
         display: flex;
@@ -134,6 +169,9 @@
         display: flex;
         align-items: center;
         margin-bottom: 20px;
+        @include max($md) {
+            margin-bottom: 10px;
+        }
     }
     &__score {
         padding: 0;
@@ -151,6 +189,7 @@
         &:not(:last-child) {
             margin-right: 9px;
         }
+        
     }
     &__icon-star {
         width: 16px;
@@ -170,11 +209,12 @@
         height: 48px;
         padding: 0 15px;
         border: 1px solid #E4E7E9;
-        &:focus {
-
-        }
         &::placeholder {
             color: #adadad;
+        }
+        @include max($md) {
+            margin-bottom: 10px;
+            height: 40px;
         }
     }
     &__textarea {
@@ -209,5 +249,8 @@
             background-color: #ccc;
             color: $main;
         }
+    }
+    @include max($lg) {
+        flex-direction: column;
     }
 }

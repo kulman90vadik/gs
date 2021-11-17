@@ -112,11 +112,13 @@
                     <svg class="header__icon header__heart-icon" aria-label="Просмотр понравившихся товаров">
                         <use xlink:href="images/sprite.svg#heart"></use>
                     </svg>
+                    <div class="header__heart-number">0</div>
                 </a>
                 <a class="header__corb" href="#">
                     <svg class="header__icon header__corb-icon" aria-label="Просмотр товаров в корзине">
                         <use xlink:href="images/sprite.svg#corb"></use>
                     </svg>
+                    <div class="header__corb-number">0</div>
                 </a>    
                 <button class="header__burger" type="button">
                     <span class="header__burger-item"></span>
@@ -126,6 +128,59 @@
             </div>
         </div>
     </div>
+
+
+
+    
+    <div class="modal-corb">
+        <div class="modal-corb__head">
+            <span class="modal-corb__name">Корзина</span>
+            <button class="modal-corb__btn modal-corb__exit" type="button">
+                <svg class="modal-corb__icon-exit" aria-label="закрыть корзину">
+                    <use xlink:href="images/sprite.svg#exit"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-corb__inner">
+            <div class="modal-corb__block">
+                <div class="modal-corb__images">
+                    <img class="modal-corb__photo" src="images/small-img.jpg" alt="замок">
+                </div>
+                <div class="modal-corb__info">
+                    <div class="modal-corb__line">
+                        <h3 class="modal-corb__title">Дверной Замок Golden Soft для офиса</h3>
+                        <button class="modal-corb__btn modal-corb__delete" type="button">
+                            <svg class="modal-corb__icon-delete" aria-label="удалить товар из корзины">
+                                <use xlink:href="images/sprite.svg#delete"></use>
+                            </svg>
+                            <span>Удалить</span>
+                        </button>
+                    </div>
+                    <div class="modal-corb__line">
+                        <div class="modal-corb__counter counter">
+                            <div class="counter__minus">-</div>
+                            <div class="counter__number">1</div>
+                            <div class="counter__plus">+</div>
+                        </div>
+                        <div class="modal-corb__price">
+                            <div class="modal-corb__price-number">33000</div>
+                            <span>&#8381;</span>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="modal-corb__result">
+                <div class="modal-corb__sum">Итого:</div>
+                <div class="modal-corb__sum-price">
+                    <div class="modal-corb__sum-number">33000</div>
+                    <span>&#8381;</span>
+                </div>
+            </div>
+
+            <a class="link modal-corb__link" href="#">Оформить заказ</a>
+        </div>
+    </div>
 </header>
 
 
@@ -133,9 +188,8 @@
         <section class="page">
     <h1 class="visually-hidden">Магазин замков</h1>
     <div class="container">
-        <!-- <div class="swiper"> -->
-            <ul class="swiper-wrapper page__slider">
-                <li class="swiper-slide page__item">
+            <ul class="page__slider">
+                <li class="page__item">
                     <div class="page__inner">
                         <div class="page__bg" style="background-image: url(images/page__slider.png);" aria-label="Картинка замок"></div>
                         <div class="page__content">
@@ -158,7 +212,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="swiper-slide page__item">
+                <li class="page__item">
                     <div class="page__inner">
                         <div class="page__bg" style="background-image: url(images/page__slider.png);" aria-label="Картинка замок"></div>
                         <div class="page__content">
@@ -181,7 +235,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="swiper-slide page__item">
+                <li class="page__item">
                     <div class="page__inner">
                         <div class="page__bg" style="background-image: url(images/page__slider.png);" aria-label="Картинка замок"></div>
                         <div class="page__content">
@@ -205,7 +259,6 @@
                     </div>
                 </li>
             </ul>
-        <!-- </div> -->
     </div>
 </section>
         <section class="statistics">
@@ -291,7 +344,7 @@
         </div>
         <ul class="products__list">
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-1.jpg" alt="замок">
                     </div>
@@ -314,7 +367,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-2.jpg" alt="замок">
                     </div>
@@ -337,7 +390,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-3.jpg" alt="замок">
                     </div>
@@ -360,7 +413,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-4.jpg" alt="замок">
                     </div>
@@ -384,7 +437,7 @@
             </li>
 
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-1.jpg" alt="замок">
                     </div>
@@ -407,7 +460,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-2.jpg" alt="замок">
                     </div>
@@ -430,7 +483,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-3.jpg" alt="замок">
                     </div>
@@ -453,7 +506,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-4.jpg" alt="замок">
                     </div>
@@ -477,7 +530,7 @@
             </li>
 
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-1.jpg" alt="замок">
                     </div>
@@ -500,7 +553,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-2.jpg" alt="замок">
                     </div>
@@ -523,7 +576,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-3.jpg" alt="замок">
                     </div>
@@ -546,7 +599,7 @@
                 </a>
             </li>
             <li class="products__item">
-                <a class="product-card" href="#">
+                <a class="product-card" href="product.html">
                     <div class="product-card__photo">
                         <img class="product-card__images" src="images/product-card-4.jpg" alt="замок">
                     </div>

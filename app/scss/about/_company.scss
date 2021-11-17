@@ -4,6 +4,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include max($md) {
+            flex-direction: column;
+        }
     }
     &__popup {
         position: relative;
@@ -20,6 +23,9 @@
             width: 94px;
             height: 112px;
             z-index: -1;
+            @include max($xl) {
+                display: none;
+            }
         }
         &::after {
             left: 0;
@@ -28,6 +34,26 @@
         &::before {
             right: 0;
             bottom: 0;
+        }
+        @include max($xl) {
+            max-width: 605px;
+            height: 425px;
+            margin-right: 15px;
+        }
+        @include max($lg) {
+            height: 290px;
+        }
+        @include max($md) {
+            height: 290px;
+            margin-bottom: 15px;
+            max-width: 85%;
+            height: 250px;
+        }
+        @include max($sm) {
+            max-width: 100%;
+        }
+        @include max($s) {
+            height: 220px;
         }
     }
     &__video {
@@ -47,6 +73,19 @@
         }
         &:focus {
             border-color: $grey;
+        }
+        @include max($lg) {
+            height: 290px;
+        }
+        @include max($md) {
+            max-width: 85%;
+            height: 250px;
+        }
+        @include max($sm) {
+            max-width: 100%;
+        }
+        @include max($s) {
+            height: 220px;
         }
     }
     &__btn {
@@ -80,6 +119,9 @@
     &__info {
         max-width: 495px;
         width: 100%;
+        @include max($md) {
+            max-width: 100%;
+        }
     }
     &__title {
         margin-bottom: 16px;
@@ -101,6 +143,9 @@
                 background-color: #eff7ff;
             }
         }
+        @include max($s) {
+            margin-bottom: 8px;
+        }
     }
     &__text {
         color: $grey;
@@ -108,7 +153,16 @@
         width: 100%;
         p {
             @include lineClamp;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 6;
         }
+        @include max($md) {
+            max-width: 100%;
+        }
+    }
+    @include max($xl) {
+        margin-bottom: 50px;
+    }
+    @include max($md) {
+        margin-bottom: 25px;
     }
 }

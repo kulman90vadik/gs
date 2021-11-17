@@ -1,11 +1,16 @@
 // $(function(){
-    jQuery(function($) {
-    // document.addEventListener('DOMContentLoaded', function(){
+// jQuery(function($) {
+
+
+    //  код который написан ниже сейчас не работает, 
+    //  если его поднять вверх то будет работать
+
+
+
+
+document.addEventListener('DOMContentLoaded', function(){
+
 //////////////////HEADER///////////////////
-
-
-
-
 
 //  start header-scroll
 let header = document.querySelector('.header');
@@ -72,7 +77,7 @@ headerBurger.addEventListener('click', function(){
 });
 // finish burger
 
-//  start sliders
+// start sliders products
     $('.page__slider, .project__list').slick({
         dots: true,
         prevArrow: '<button type="button" class="slick-prev"><svg class="icon"><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
@@ -118,6 +123,19 @@ headerBurger.addEventListener('click', function(){
 //  finish sliders
 
 /////////////////////HEADER//////////////////
+
+
+
+// добавление товаров 
+    document.querySelector('.category__link-all').addEventListener('click', function(){
+        let categoryItemsHidden = document.querySelectorAll('.category__item--hidden');
+        categoryItemsHidden.forEach(elem => {
+            elem.classList.add('category__item--show');
+        });
+        this.classList.add('category__link--remove');
+    });
+
+
 
 
 // modal ///////////////////////////////
@@ -205,25 +223,7 @@ sidebarFilterRadio.forEach(elem => {
 // finish filter
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///////////////PRODUCT///////////
+///////////////PRODUCT///////////      ....http://localhost:3000/product.html 
 
 //  start select product
 let particularBtn = document.querySelector('.particular__btn');
@@ -273,9 +273,9 @@ reviewAdd.addEventListener('click', function(){
     });
     this.classList.add('review__add--remove')
 });
-//  finish review
+// finish review
 
-// // start star
+// start star
 let reviewScore = document.querySelectorAll('.review__score');
 reviewScore.forEach(function(item, index){
 
@@ -294,7 +294,6 @@ reviewScore.forEach(function(item, index){
 // finish оставить отзыв о товаре ////////////////////////
 
 // start accordion
-// ДОДЕЛАТЬ!!!
 let particularHeads = document.querySelectorAll('.particular__head');
 const particularInfo = document.querySelector('.particular__info--active');
 particularInfo.style.maxHeight = particularInfo.scrollHeight + 'px';
@@ -327,41 +326,55 @@ particularInfo.style.maxHeight = particularInfo.scrollHeight + 'px';
         });
     });
 //  finish particular sliders     
-   ///////////////PRODUCT///////////     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ///////////////////category/////////////////
-
-    document.querySelector('.category__link-all').addEventListener('click', function(){
-        let categoryItemsHidden = document.querySelectorAll('.category__item--hidden');
-        categoryItemsHidden.forEach(elem => {
-            elem.classList.add('category__item--show');
-        });
-        this.classList.add('category__link--remove');
+// Добавление товаров в чисо понравившихся    
+    document.querySelector('.particular__add-btn').addEventListener('click', function(){
+        let heartNumber = document.querySelector('.header__heart-number');
+        let number = Number(heartNumber.innerHTML);
+        heartNumber.classList.add('header__number');
+        heartNumber.innerHTML = number + 1;
     });
-    
-    
-    ///////////////////category/////////////////
 
+// Добавление товаров в корзину
+    document.querySelector('.particular__link').addEventListener('click', function(e){
+        e.preventDefault();
+        let corbNumber = document.querySelector('.header__corb-number');
+        let number = Number(corbNumber.innerHTML);
+        corbNumber.classList.add('header__number');
+        corbNumber.innerHTML = number + 1;
+    });
+
+
+
+
+// удаление товара из корзины
+//   let cardsDelete = document.querySelectorAll('.modal-corb__delete');
+//   cardsDelete.forEach(elem => {
+//       elem.addEventListener('click', function(){
+//           let block = elem.closest('.modal-corb__block');
+//           block.classList.add('modal-corb__block--hidden');
+//       });
+//   });
+  
+
+
+// Счётчик в корзине    
+    // let corbPrice = document.querySelector('.modal-corb__price-number');
+    // let corbPriceValue = Number(corbPrice.innerHTML);
+    // document.querySelector('.modal-corb__counter').addEventListener('click', function(e){
+    //     let number = document.querySelector('.counter__number');
+    //     let numberValue = Number(number.innerHTML);
+    //     if(e.target.closest('.counter__plus')) {
+    //         number.innerHTML = numberValue + 1;
+    //         corbPrice.innerHTML = Number(corbPrice.innerHTML) + corbPriceValue;
+    //     }
+    //     if(e.target.closest('.counter__minus')) {
+    //         if(numberValue > 1) {
+    //             number.innerHTML = numberValue - 1;
+    //             corbPrice.innerHTML = Number(corbPrice.innerHTML) - corbPriceValue;
+    //         }
+    //     }
+    // });
 
 });

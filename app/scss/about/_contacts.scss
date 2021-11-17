@@ -4,21 +4,39 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        @include max($lg) {
+            flex-direction: column;
+        }
     }
     &__content {
         max-width: 500px;
         width: 100%;
         margin-right: 20px;
+        @include max($xl) {
+            max-width: 330px;
+        }
+        @include max($lg) {
+            max-width: 100%;
+            margin: 0 0 15px;
+        }
     }
     &__address {
         max-width: 650px;
         width: 100%;
+        @include max($md) {
+            max-width: 500px;
+            margin: 0 auto;
+        }
     }
     &__subtitle {
         font-weight: 700;
         font-size: 32px;
         margin-bottom: 10px;
         display: block;
+        @include max($lg) {
+            font-size: 25px;
+            margin-bottom: 3px;
+        }
     }
     &__text {
         font-size: 16px;
@@ -27,6 +45,9 @@
         p {
             @include lineClamp;
             -webkit-line-clamp: 4;
+        }
+        @include max($lg) {
+            margin-bottom: 10px;
         }
     }
     &__input {
@@ -57,6 +78,9 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        @include max($md) {
+            flex-direction: column;
+        }
     }
     &__item {
         max-width: 209px;
@@ -65,6 +89,18 @@
         flex-direction: column;
         &:not(:last-child) {
             margin-right: 5px;
+            @include max($md) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        @include max($md) {
+            max-width: 250px;
+        }
+        &:nth-child(even) {
+            @include max($md) {
+                margin-left: auto;
+            }
         }
     }
     &__name {
@@ -100,5 +136,11 @@
         max-width: 209px;
         width: 100%;
         height: 156px;
+        @include max($md) {
+            max-width: 250px;
+        }
+    }
+    @include max($xl) {
+        padding: 50px 0;
     }
 }

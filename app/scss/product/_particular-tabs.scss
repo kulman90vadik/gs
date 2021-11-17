@@ -2,10 +2,25 @@
     &__list {
         display: flex;
         margin-bottom: 50px;
+        @include max($xl) {
+            margin-bottom: 25px;
+        }
+        @include max($s) {
+            margin-bottom: 14px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__items {
         &:not(:last-child) {
             margin-right: 60px;
+            @include max($sm) {
+                margin-right: 16px;
+            }
+            @include max($s) {
+                margin-right: 0;
+                margin-bottom: 7px;
+            }
         }
     }
     &__btn {
@@ -27,15 +42,27 @@
         &--active {
             border-bottom: 2px solid $main;
         }
+        @include max($sm) {
+            font-size: 18px;
+        }
+        @include max($s) {
+            padding-bottom: 3px;
+        }
     }
     
     &__characteristic {
         display: flex;
         justify-content: space-between;
+        @include max($xl) {
+            flex-direction: column;
+        }
     }
     &__holder {
         max-width: 49%;
         width: 100%;
+        @include max($xl) {
+            max-width: 100%;
+        }
     }
     &__item {
         display: flex;
@@ -45,6 +72,15 @@
         &:nth-child(odd) {
             background-color: #fafafa;
         }
+        @include max($xl) {
+            padding: 10px 0;
+        }
+        @include max($sm) {
+            padding: 7px 0;
+        }
+        @include max($s) {
+            display: block;
+        }
     }
     &__name,
     &__description {
@@ -53,7 +89,10 @@
         width: 100%;
         padding: 0 12px;
         @include lineClamp;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 4;
+        @include max($s) {
+            max-width: 100%;
+        }
     }
     &__description {
         color: $grey;
@@ -66,11 +105,18 @@
     &__info {
         display: flex;
         align-items: center;
+        @include max($md) {
+            flex-direction: column;
+        }
     }
     &__inner {
         max-width: 715px;
         width: 100%;
         margin-right: 10px;
+        @include max($md) {
+            margin-right: 0;
+            max-width: 100%;
+        }
     }
     &__text {
         font-size: 16px;
@@ -81,6 +127,9 @@
         }
         &:first-child {
             margin-bottom: 25px;
+            @include max($lg) {
+                margin-bottom: 10px;
+            }
         }
     }
     &__heading {
@@ -91,6 +140,9 @@
     }
     &__advantage {
         margin-bottom: 25px;
+        @include max($md) {
+            margin-bottom: 11px;
+        }
     }
     &__advantage-item {
         font-size: 16px;
@@ -118,6 +170,14 @@
         width: 100%;
         height: 650px;
         @include bg;
+        @include max($lg) {
+            max-width: 310px;
+            height: 425px;
+        }
+        @include max($sm) {
+            max-width: 225px;
+            height: 290px;
+        }
     }
     &__content {
         display: none;

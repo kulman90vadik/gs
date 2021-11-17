@@ -92,6 +92,14 @@
             font-weight: 600;
             font-size: 72px;
             margin-bottom: 5px;
+            @include max($lg) {
+                font-size: 50px;
+                line-height: 1.2;
+                margin-bottom: 0;
+            }
+            @include max($sm) {
+                font-size: 40px;
+            }
         }
         & .statistics__description {
             font-size: 18px;
